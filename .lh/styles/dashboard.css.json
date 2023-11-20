@@ -1,0 +1,26 @@
+{
+    "sourceFile": "styles/dashboard.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1700438565381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1700438574506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n .main-dashBoard-container{\r\n-    width: 100%;\r\n-    \r\n+    width: 100vw;\r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700438687654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n .main-dashBoard-container{\r\n     width: 100vw;\r\n-    height: (100vh - 200px);\r\n+    height: cal(100vh - 200px);\r\n     background-color: red;\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1700438565381,
+            "name": "Commit-0",
+            "content": ".main-dashBoard-container{\r\n    \r\n}"
+        }
+    ]
+}

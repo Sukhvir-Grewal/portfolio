@@ -1,0 +1,33 @@
+.main-about-container{
+    margin-left: 260px;
+    height: 380px;
+    background-color: gainsboro;
+}
+
+.about-container{
+    height: 245px;
+    /* background-color: rgb(87, 85, 85); */
+    margin-left: 150px;
+    margin-right: 150px;
+    font-size: larger;
+    overflow-y: auto;
+}
+
+@media (max-width: 600px) {
+    
+    .main-about-container{
+        margin-top: 50px;
+        margin-left: 50px;
+        height: 380px;
+        background-color: gainsboro;
+    }
+    
+    .about-container{
+        height: 245px;
+        /* background-color: rgb(87, 85, 85); */
+        margin-left: 50px;
+        margin-right: 10px;
+        font-size: large;
+        overflow-y: auto;
+    }
+}

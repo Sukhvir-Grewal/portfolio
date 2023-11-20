@@ -1,0 +1,54 @@
+{
+    "sourceFile": "pages/_app.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1697582788328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697582795819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+import '@/styles/globals.css'\n+\n+export default function App({ Component, pageProps }) {\n+  return <Component {...pageProps} />\n+}\n"
+                },
+                {
+                    "date": 1697582947691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+import '@/styles/globals.css'\n+import '@/styles/globals.css'\n+\n+export default function App({ Component, pageProps }) {\n+  return <Component {...pageProps} />\n+}\n"
+                },
+                {
+                    "date": 1700433954403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,5 @@\n import '@/styles/globals.css'\n-import '@/styles/globals.css'\n \n export default function App({ Component, pageProps }) {\n   return <Component {...pageProps} />\n }\n-import '@/styles/globals.css'\n-\n-export default function App({ Component, pageProps }) {\n-  return <Component {...pageProps} />\n-}\n-import '@/styles/globals.css'\n-import '@/styles/globals.css'\n-\n-export default function App({ Component, pageProps }) {\n-  return <Component {...pageProps} />\n-}\n"
+                },
+                {
+                    "date": 1700435935286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import '@/styles/globals.css'\n+import '@/styles/globals.css'\n \n export default function App({ Component, pageProps }) {\n   return <Component {...pageProps} />\n }\n"
+                },
+                {
+                    "date": 1700435941220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import '@/styles/globals.css'\n-import '@/styles/globals.css'\n+import '@/styles/footer.css'\n \n export default function App({ Component, pageProps }) {\n   return <Component {...pageProps} />\n }\n"
+                },
+                {
+                    "date": 1700438551377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import '@/styles/globals.css'\n import '@/styles/footer.css'\n+import '@/styles/footer.css'\n \n export default function App({ Component, pageProps }) {\n   return <Component {...pageProps} />\n }\n"
+                },
+                {
+                    "date": 1700495861292,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import '@/styles/globals.css'\n import '@/styles/footer.css'\n-import '@/styles/footer.css'\n+import '@/styles/dashboard.css'\n+import '@/styles/dashboard.css'\n \n export default function App({ Component, pageProps }) {\n   return <Component {...pageProps} />\n }\n"
+                },
+                {
+                    "date": 1700504379437,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import '@/styles/globals.css'\n import '@/styles/footer.css'\n import '@/styles/dashboard.css'\n-import '@/styles/dashboard.css'\n+import '@/styles/about.css'\n+import '@/styles/about.css'\n \n export default function App({ Component, pageProps }) {\n   return <Component {...pageProps} />\n }\n"
+                },
+                {
+                    "date": 1700504385062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import '@/styles/globals.css'\n import '@/styles/footer.css'\n import '@/styles/dashboard.css'\n import '@/styles/about.css'\n-import '@/styles/about.css'\n+import '@/styles/project.css'\n \n export default function App({ Component, pageProps }) {\n   return <Component {...pageProps} />\n }\n"
+                }
+            ],
+            "date": 1697582788328,
+            "name": "Commit-0",
+            "content": "import '@/styles/globals.css'\nimport '@/styles/globals.css'\n\nexport default function App({ Component, pageProps }) {\n  return <Component {...pageProps} />\n}\n"
+        }
+    ]
+}

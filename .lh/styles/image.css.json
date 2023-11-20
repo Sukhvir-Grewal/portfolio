@@ -1,0 +1,58 @@
+{
+    "sourceFile": "styles/image.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1697582807504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697582817454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,4 +7,81 @@\n     overflow: hidden;\r\n     position: relative;\r\n     z-index: 1;\r\n }\r\n+\r\n+.camera {\r\n+    position: fixed;\r\n+}\r\n+.myImage1 {\r\n+    position: fixed;\r\n+    left: 450px;\r\n+    bottom: 200px;\r\n+    margin-right: 130px;\r\n+    transform-origin: left bottom;\r\n+    z-index: -1;\r\n+}\r\n+.myImage2 {\r\n+    position: fixed;\r\n+    right: 450px;\r\n+    bottom: 200px;\r\n+    margin-left: 130px;\r\n+    transform-origin: right bottom;\r\n+    z-index: -1;\r\n+}\r\n+.rotateLeftLeft {\r\n+    animation: LeftGoLeft 1s ease;\r\n+    rotate: -45deg;\r\n+    transform: scale(1.5);\r\n+}\r\n+.rotateLeftRight {\r\n+    animation: LeftGoRight 1s ease;\r\n+}\r\n+@keyframes LeftGoLeft {\r\n+    from {\r\n+        rotate: 0deg;\r\n+        transform: scale(1);\r\n+    }\r\n+    to {\r\n+        rotate: -45deg;\r\n+        transform: scale(1.5);\r\n+    }\r\n+}\r\n+@keyframes LeftGoRight {\r\n+    from {\r\n+        rotate: -45deg;\r\n+        transform: scale(1.5);\r\n+    }\r\n+    to {\r\n+        rotate: 0deg;\r\n+        transform: scale(1);\r\n+    }\r\n+}\r\n+\r\n+.rotateRightRight {\r\n+    animation: RightGoRight 1s ease;\r\n+    rotate: 45deg;\r\n+    transform: scale(1.5);\r\n+}\r\n+.rotateRightLeft {\r\n+    animation: RightGoLeft 1s ease;\r\n+}\r\n+@keyframes RightGoLeft {\r\n+    from {\r\n+        rotate: 45deg;\r\n+        transform: scale(1.5);\r\n+    }\r\n+    to {\r\n+        rotate: 0deg;\r\n+        transform: scale(1);\r\n+    }\r\n+}\r\n+@keyframes RightGoRight {\r\n+    from {\r\n+        rotate: 0deg;\r\n+        transform: scale(1);\r\n+    }\r\n+    to {\r\n+        rotate: 45deg;\r\n+        transform: scale(1.5);\r\n+    }\r\n+}\r\n"
+                },
+                {
+                    "date": 1697583548202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,8 @@\n     overflow: hidden;\r\n     position: relative;\r\n     z-index: 1;\r\n }\r\n-\r\n .camera {\r\n     position: fixed;\r\n }\r\n .myImage1 {\r\n"
+                },
+                {
+                    "date": 1697583556388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n }\r\n .camera {\r\n     position: fixed;\r\n }\r\n+\r\n .myImage1 {\r\n     position: fixed;\r\n     left: 450px;\r\n     bottom: 200px;\r\n"
+                },
+                {
+                    "date": 1697583563468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n     z-index: 1;\r\n }\r\n .camera {\r\n     position: fixed;\r\n+    height: 100px;\r\n }\r\n \r\n .myImage1 {\r\n     position: fixed;\r\n"
+                },
+                {
+                    "date": 1697583569880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,10 @@\n     z-index: 1;\r\n }\r\n .camera {\r\n     position: fixed;\r\n-    height: 100px;\r\n+    height: 10px;\r\n+    height: 10px;\r\n }\r\n \r\n .myImage1 {\r\n     position: fixed;\r\n"
+                },
+                {
+                    "date": 1697587187515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,12 +9,11 @@\n     z-index: 1;\r\n }\r\n .camera {\r\n     position: fixed;\r\n-    height: 10px;\r\n-    height: 10px;\r\n }\r\n \r\n+\r\n .myImage1 {\r\n     position: fixed;\r\n     left: 450px;\r\n     bottom: 200px;\r\n"
+                },
+                {
+                    "date": 1697587193413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,11 @@\n .camera {\r\n     position: fixed;\r\n }\r\n \r\n-\r\n+@media () {\r\n+    \r\n+}\r\n .myImage1 {\r\n     position: fixed;\r\n     left: 450px;\r\n     bottom: 200px;\r\n"
+                },
+                {
+                    "date": 1697587199347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,90 @@\n+.whiteBackGround {\r\n+    height: 100vh;\r\n+    width: 100%;\r\n+    display: flex;\r\n+    justify-content: center;\r\n+    align-items: center;\r\n+    overflow: hidden;\r\n+    position: relative;\r\n+    z-index: 1;\r\n+}\r\n+.camera {\r\n+    position: fixed;\r\n+}\r\n+\r\n+@media (max-width) {\r\n+    \r\n+}\r\n+.myImage1 {\r\n+    position: fixed;\r\n+    left: 450px;\r\n+    bottom: 200px;\r\n+    margin-right: 130px;\r\n+    transform-origin: left bottom;\r\n+    z-index: -1;\r\n+}\r\n+.myImage2 {\r\n+    position: fixed;\r\n+    right: 450px;\r\n+    bottom: 200px;\r\n+    margin-left: 130px;\r\n+    transform-origin: right bottom;\r\n+    z-index: -1;\r\n+}\r\n+.rotateLeftLeft {\r\n+    animation: LeftGoLeft 1s ease;\r\n+    rotate: -45deg;\r\n+    transform: scale(1.5);\r\n+}\r\n+.rotateLeftRight {\r\n+    animation: LeftGoRight 1s ease;\r\n+}\r\n+@keyframes LeftGoLeft {\r\n+    from {\r\n+        rotate: 0deg;\r\n+        transform: scale(1);\r\n+    }\r\n+    to {\r\n+        rotate: -45deg;\r\n+        transform: scale(1.5);\r\n+    }\r\n+}\r\n+@keyframes LeftGoRight {\r\n+    from {\r\n+        rotate: -45deg;\r\n+        transform: scale(1.5);\r\n+    }\r\n+    to {\r\n+        rotate: 0deg;\r\n+        transform: scale(1);\r\n+    }\r\n+}\r\n+\r\n+.rotateRightRight {\r\n+    animation: RightGoRight 1s ease;\r\n+    rotate: 45deg;\r\n+    transform: scale(1.5);\r\n+}\r\n+.rotateRightLeft {\r\n+    animation: RightGoLeft 1s ease;\r\n+}\r\n+@keyframes RightGoLeft {\r\n+    from {\r\n+        rotate: 45deg;\r\n+        transform: scale(1.5);\r\n+    }\r\n+    to {\r\n+        rotate: 0deg;\r\n+        transform: scale(1);\r\n+    }\r\n+}\r\n+@keyframes RightGoRight {\r\n+    from {\r\n+        rotate: 0deg;\r\n+        transform: scale(1);\r\n+    }\r\n+    to {\r\n+        rotate: 45deg;\r\n+        transform: scale(1.5);\r\n+    }\r\n+}\r\n"
+                },
+                {
+                    "date": 1697587204812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n .camera {\r\n     position: fixed;\r\n }\r\n \r\n-@media (max-width:) {\r\n+@media (max-width: ) {\r\n     \r\n }\r\n .myImage1 {\r\n     position: fixed;\r\n"
+                },
+                {
+                    "date": 1697587276356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,90 @@\n+.whiteBackGround {\r\n+    height: 100vh;\r\n+    width: 100%;\r\n+    display: flex;\r\n+    justify-content: center;\r\n+    align-items: center;\r\n+    overflow: hidden;\r\n+    position: relative;\r\n+    z-index: 1;\r\n+}\r\n+.camera {\r\n+    position: fixed;\r\n+}\r\n+\r\n+@media (min-width: 400px) {\r\n+    \r\n+}\r\n+.myImage1 {\r\n+    position: fixed;\r\n+    left: 450px;\r\n+    bottom: 200px;\r\n+    margin-right: 130px;\r\n+    transform-origin: left bottom;\r\n+    z-index: -1;\r\n+}\r\n+.myImage2 {\r\n+    position: fixed;\r\n+    right: 450px;\r\n+    bottom: 200px;\r\n+    margin-left: 130px;\r\n+    transform-origin: right bottom;\r\n+    z-index: -1;\r\n+}\r\n+.rotateLeftLeft {\r\n+    animation: LeftGoLeft 1s ease;\r\n+    rotate: -45deg;\r\n+    transform: scale(1.5);\r\n+}\r\n+.rotateLeftRight {\r\n+    animation: LeftGoRight 1s ease;\r\n+}\r\n+@keyframes LeftGoLeft {\r\n+    from {\r\n+        rotate: 0deg;\r\n+        transform: scale(1);\r\n+    }\r\n+    to {\r\n+        rotate: -45deg;\r\n+        transform: scale(1.5);\r\n+    }\r\n+}\r\n+@keyframes LeftGoRight {\r\n+    from {\r\n+        rotate: -45deg;\r\n+        transform: scale(1.5);\r\n+    }\r\n+    to {\r\n+        rotate: 0deg;\r\n+        transform: scale(1);\r\n+    }\r\n+}\r\n+\r\n+.rotateRightRight {\r\n+    animation: RightGoRight 1s ease;\r\n+    rotate: 45deg;\r\n+    transform: scale(1.5);\r\n+}\r\n+.rotateRightLeft {\r\n+    animation: RightGoLeft 1s ease;\r\n+}\r\n+@keyframes RightGoLeft {\r\n+    from {\r\n+        rotate: 45deg;\r\n+        transform: scale(1.5);\r\n+    }\r\n+    to {\r\n+        rotate: 0deg;\r\n+        transform: scale(1);\r\n+    }\r\n+}\r\n+@keyframes RightGoRight {\r\n+    from {\r\n+        rotate: 0deg;\r\n+        transform: scale(1);\r\n+    }\r\n+    to {\r\n+        rotate: 45deg;\r\n+        transform: scale(1.5);\r\n+    }\r\n+}\r\n"
+                }
+            ],
+            "date": 1697582807504,
+            "name": "Commit-0",
+            "content": ".whiteBackGround {\r\n    height: 100vh;\r\n    width: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    overflow: hidden;\r\n    position: relative;\r\n    z-index: 1;\r\n}\r\n"
+        }
+    ]
+}

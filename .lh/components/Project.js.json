@@ -1,0 +1,46 @@
+{
+    "sourceFile": "components/Project.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1700504393082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1700504399369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,1 @@\n+export default function project\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700504534183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+import Style from \"@/styles/Home.module.css\";\r\n+import Image from \"next/image\";\r\n+export default function Project(){\r\n+\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700504542689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import Style from \"@/styles/Home.module.css\";\r\n+import Image from \"next/image\";\r\n+\r\n+export default function Project(){\r\n+    <div className={Style.goBackContainer}>\r\n+                <div className={Style.goBack}>\r\n+                    <Image \r\n+                        className={Style.back}\r\n+                        src='/images/back.png'\r\n+                        height={50}\r\n+                        width={50}\r\n+                    />\r\n+\r\n+                </div>\r\n+            </div>\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700504550470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,23 +1,8 @@\n import Style from \"@/styles/Home.module.css\";\r\n import Image from \"next/image\";\r\n \r\n export default function Project(){\r\n-    <div className={Style.goBackContainer}>\r\n-                <div className={Style.goBack}>\r\n-                    <Image \r\n-                        className={Style.back}\r\n-                        src='/images/back.png'\r\n-                        height={50}\r\n-                        width={50}\r\n-                    />\r\n-\r\n-                </div>\r\n-            </div>\r\n-}\n-import Style from \"@/styles/Home.module.css\";\r\n-import Image from \"next/image\";\r\n-export default function Project(){\r\n-\r\n-}\n-export default function project\n-export\n\\ No newline at end of file\n+    return(\r\n+        ><></>\r\n+    )\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700504556862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,20 @@\n+import Style from \"@/styles/Home.module.css\";\r\n+import Image from \"next/image\";\r\n+\r\n+export default function Project(){\r\n+    return(\r\n+        <>\r\n+        <div className={Style.goBackContainer}>\r\n+                <div className={Style.goBack}>\r\n+                    <Image \r\n+                        className={Style.back}\r\n+                        src='/images/back.png'\r\n+                        height={50}\r\n+                        width={50}\r\n+                    />\r\n+\r\n+                </div>\r\n+            </div>\r\n+        </>\r\n+    )\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700504563662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n                             width={50}\r\n                         />\r\n \r\n                     </div>\r\n-                </div>\r\n+            </div>\r\n         </>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700504572159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+import Style from \"@/styles/Home.module.css\";\r\n+import Image from \"next/image\";\r\n+\r\n+export default function Project(){\r\n+    return(\r\n+        <>\r\n+            <div className={Style.goBackContainer}>\r\n+                    <div className={Style.goBack}>\r\n+                        <Image \r\n+                            className={Style.back}\r\n+                            src='/images/back.png'\r\n+                            height={50}\r\n+                            width={50}\r\n+                        />\r\n+                    </div>\r\n+            </div>\r\n+        </>\r\n+    )\r\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1700504393082,
+            "name": "Commit-0",
+            "content": "export"
+        }
+    ]
+}
