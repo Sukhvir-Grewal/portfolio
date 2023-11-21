@@ -1,0 +1,41 @@
+.skills-container {
+    height: 100%;
+    width: 380px;
+    margin-left: 150px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    gap: 10px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.expand-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 2/4;
+}
+@media (max-width: 600px) {
+    .main-about-container {
+        margin-left: 0;
+        height: 380px;
+        background-color: gainsboro;
+    }
+    .skills-container {
+        height: 100%;
+        width: 380px;
+        margin-left: auto;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        gap: 10px;
+    }
+}

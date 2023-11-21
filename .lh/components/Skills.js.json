@@ -1,0 +1,26 @@
+{
+    "sourceFile": "components/Skills.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1700575754469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1700575763981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import Style from \"@/styles/Home.module.css\";\r\n import Image from \"next/image\";\r\n \r\n-export default function Contact(){\r\n+export default function Skills(){\r\n     return(\r\n         <>\r\n             <div className={Style.goBackContainer}>\r\n                     <div className={Style.goBack}>\r\n"
+                },
+                {
+                    "date": 1700575769941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,33 @@\n+import Style from \"@/styles/Home.module.css\";\r\n+import Image from \"next/image\";\r\n+\r\n+export default function Skills(){\r\n+    return(\r\n+        <>\r\n+            <div className={Style.goBackContainer}>\r\n+                    <div className={Style.goBack}>\r\n+                        <Image \r\n+                            className={Style.back}\r\n+                            src='/images/back.png'\r\n+                            height={50}\r\n+                            width={50}\r\n+                        />\r\n+                    </div>\r\n+            </div>\r\n+\r\n+            <div className=\"main-about-container\">\r\n+                <div className=\"name-tag-container\">\r\n+                    <div className=\"name-tag\">&lt;contact&gt;</div>\r\n+                </div>\r\n+                \r\n+                <div className=\"contact-container\">\r\n+                   \r\n+                </div>\r\n+\r\n+                <div className=\"name-tag-container\">\r\n+                    <div className=\"name-tag\">&lt;/contact&gt;</div>\r\n+                </div>\r\n+            </div>\r\n+        </>\r\n+    )\r\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1700575754469,
+            "name": "Commit-0",
+            "content": ""
+        }
+    ]
+}

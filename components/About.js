@@ -1,11 +1,11 @@
 import Style from "@/styles/Home.module.css";
 import Image from "next/image";
 
-export default function About() {
+export default function About({setView}) {
     return (
         <>
             <div className={Style.goBackContainer}>
-                <div className={Style.goBack}>
+                <div onClick={() => setView("dashboard")} className={Style.goBack}>
                     <Image 
                         className={Style.back}
                         src='/images/back.png'

@@ -1,0 +1,36 @@
+.contact-container{
+    height: 65%;
+    margin-left: 150px;
+    margin-right: 60px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.contact{
+    height: 25%;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    font-size: larger;
+}
+
+@media (max-width: 600px) {
+    .contact-container{
+        height: 65%;
+        margin-left: 30px;
+        margin-right: 0px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+    .contact{
+        height: 25%;
+        width: 100%;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        font-size: small;
+    }
+}

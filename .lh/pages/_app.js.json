@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 9,
+            "activePatchIndex": 14,
             "patches": [
                 {
                     "date": 1697582788328,
@@ -44,6 +44,26 @@
                 {
                     "date": 1700504385062,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import '@/styles/globals.css'\n import '@/styles/footer.css'\n import '@/styles/dashboard.css'\n import '@/styles/about.css'\n-import '@/styles/about.css'\n+import '@/styles/project.css'\n \n export default function App({ Component, pageProps }) {\n   return <Component {...pageProps} />\n }\n"
+                },
+                {
+                    "date": 1700521943182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import '@/styles/footer.css'\n import '@/styles/dashboard.css'\n import '@/styles/about.css'\n import '@/styles/project.css'\n+import '@/styles/project.css'\n \n export default function App({ Component, pageProps }) {\n   return <Component {...pageProps} />\n }\n"
+                },
+                {
+                    "date": 1700575801103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n import '@/styles/footer.css'\n import '@/styles/dashboard.css'\n import '@/styles/about.css'\n import '@/styles/project.css'\n-import '@/styles/project.css'\n+import '@/styles/contact.css'\n+import '@/styles/contact.css'\n \n export default function App({ Component, pageProps }) {\n   return <Component {...pageProps} />\n }\n"
+                },
+                {
+                    "date": 1700583848815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n import '@/styles/globals.css'\n import '@/styles/footer.css'\n import '@/styles/dashboard.css'\n import '@/styles/about.css'\n-import '@/styles/project.css'\n-import '@/styles/contact.css'\n-import '@/styles/contact.css'\n+// import '@/styles/project.css'\n+// import '@/styles/contact.css'\n+// import '@/styles/skills.css'\n \n export default function App({ Component, pageProps }) {\n   return <Component {...pageProps} />\n }\n"
+                },
+                {
+                    "date": 1700583854258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import '@/styles/globals.css'\n import '@/styles/footer.css'\n-import '@/styles/dashboard.css'\n+// import '@/styles/dashboard.css'\n import '@/styles/about.css'\n // import '@/styles/project.css'\n // import '@/styles/contact.css'\n // import '@/styles/skills.css'\n"
+                },
+                {
+                    "date": 1700584413064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n import '@/styles/globals.css'\n import '@/styles/footer.css'\n-// import '@/styles/dashboard.css'\n+import '@/styles/dashboard.css'\n import '@/styles/about.css'\n-// import '@/styles/project.css'\n-// import '@/styles/contact.css'\n-// import '@/styles/skills.css'\n+import '@/styles/project.css'\n+import '@/styles/contact.css'\n+import '@/styles/skills.css'\n \n export default function App({ Component, pageProps }) {\n   return <Component {...pageProps} />\n }\n"
                 }
             ],
             "date": 1697582788328,

@@ -1,17 +1,24 @@
 .footer-container {
     width: 100vw;
-    height: 200px;
+    height: 150px;
     background-color: #D3D3D3;
     position: fixed;
     bottom: 0;
     display: flex; 
 }
 .image-container {
-    width: 325px;
+    width: 332px;
     height: 100%;
     background-color: #C0C0C0;
     position: relative;
     overflow: visible;
+}
+
+.dialogs-container{
+    height: 100%;
+    width: 100vw;
+    background-color: #808080;
+    padding: 20px;
 }
 
 .myImg{
@@ -19,37 +26,31 @@
     z-index: 10;
     top: -50px; /* Adjust this value to get the desired 3D effect */
     left: 50%; /* Center horizontally */
-    transform: translateX(-50%) translateY(-35%);
-}
-
-.dialogs-container{
-    height: 100%;
-    width: 100vw;
-    background-color: #808080;
-    overflow: auto;
-    padding: 20px;
+    transform: translateX(-44%) translateY(-50%);
+    height: 450px;
+    width: 450px;
 }
 .dialogs{
     height: 150px;
     width: 100%;
     background-color: #5f5d5d;
-    font-size: large;
+    font-size: larger;
 }
 
-@media (min-width: 600px) {
+@media (max-width: 600px) {
     .myImg{
         position: absolute;
         z-index: 10;
         top: -50px; /* Adjust this value to get the desired 3D effect */
         left: 50%; /* Center horizontally */
-        transform: translateX(-45%) translateY(-50%);
-        height: 500px;
-        width: 500px;
+        transform: translateX(-50%) translateY(-35%);
+        height: 400px;
+        width: 400px;
     }
     .dialogs{
         height: 150px;
         width: 100%;
         background-color: #5f5d5d;
-        font-size: larger;
+        font-size: large;
     }
 }
