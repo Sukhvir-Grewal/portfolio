@@ -100,7 +100,7 @@ const ImagesArray = [
             {
                 name: "CSS3",
                 percentage: 30,
-            }
+            },
         ],
         about: "This project is an API-based dictionary offering word searches with meanings, synonyms, antonyms, and pronunciation features.",
     },
@@ -109,12 +109,17 @@ const ImagesArray = [
         name: "ios Calculator",
         languages: [
             {
-                name: "",
-                percentage: 0,
+                name: "JavaScript",
+                percentage: 95,
             },
-            "JavaScript",
-            "Html5",
-            "CSS3",
+            {
+                name: "Html5",
+                percentage: 24,
+            },
+            {
+                name: "CSS3",
+                percentage: 60,
+            },
         ],
         about: "This project is a replica of the iOS calculator, designed to mimic its functionality and style.",
     },
@@ -123,12 +128,17 @@ const ImagesArray = [
         name: "Sequence Game",
         languages: [
             {
-                name: "",
-                percentage: 0,
+                name: "JavaScript",
+                percentage: 80,
             },
-            "JavaScript",
-            "Html5",
-            "CSS3",
+            {
+                name: "Html5",
+                percentage: 50,
+            },
+            {
+                name: "CSS3",
+                percentage: 40,
+            },
         ],
         about: "Experience the thrill of memory and rhythm with a game where players replicate glowing patterns of boxes in sync with music, escalating in speed and complexity at each level.",
     },
@@ -137,13 +147,21 @@ const ImagesArray = [
         name: "Tic Tac Toe",
         languages: [
             {
-                name: "",
-                percentage: 0,
+                name: "NextJS",
+                percentage: 70,
             },
-            "NextJS",
-            "JavaScript",
-            "Html5",
-            "CSS3",
+            {
+                name: "JavaScript",
+                percentage: 60,
+            },
+            {
+                name: "Html5",
+                percentage: 50,
+            },
+            {
+                name: "CSS3",
+                percentage: 70,
+            },
         ],
         about: "Dive into a dynamic Tic Tac Toe experience crafted in Next.js, offering the option to play against friends or a challenging computer opponent.",
     },

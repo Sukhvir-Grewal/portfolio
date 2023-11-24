@@ -1,10 +1,10 @@
-.goBackContainer{
+.goBackContainer {
     width: 100vw;
     /* background-color: gray; */
     height: 65px;
 }
 
-.goBack{
+.goBack {
     width: 150px;
     height: 100%;
     /* background-color: rgb(63, 62, 62); */
@@ -12,7 +12,7 @@
     place-content: center;
 }
 
-.back{
+.back {
     cursor: pointer;
 }
 
@@ -66,66 +66,62 @@
     margin: 10px;
 }
 
-.customCardBody{
+.customCardBody {
     padding: 10px;
 }
 
-.singleCustomCard{
+.singleCustomCard {
     border: 1px solid black;
     border-radius: 10px;
     overflow: hidden;
     width: 100%;
-    
 }
 
-.singleImageContainer{
+.singleImageContainer {
     height: 200px;
     display: flex;
     display: inline-block;
-
 }
 
-.imageLanguageContainer{
+.imageLanguageContainer {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
-.singleCustomCardImage{
+.singleCustomCardImage {
     height: 200px;
     min-width: 18rem;
     object-fit: contain;
     object-position: center;
 }
 
-.mainLanguageBarContainer{
+.mainLanguageBarContainer {
     border: 1px solid black;
     margin: 20px;
     display: inline-block;
     flex-grow: 1;
 }
 
-@keyframes barAnimation {
-    from{width: 0;}
-    to{width: 100%;}
+.languageBarContainer{
+    background-color: red;
 }
+
+
 
 /* ******************************************** */
 
 @media (max-width: 600px) {
-   
-    .goBack{
+    .goBack {
         width: 100px;
         height: 100%;
         display: grid;
         place-content: center;
     }
 
-    .singleCustomCardImage{
+    .singleCustomCardImage {
         height: 200px;
         width: 100%;
         object-fit: contain;
         object-position: center;
     }
-
-
 }

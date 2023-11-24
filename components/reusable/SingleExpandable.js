@@ -2,9 +2,11 @@ import ImagesArray from "@/storage";
 import { Card, CardGroup } from "react-bootstrap";
 import { Image } from "react-bootstrap";
 import Style from "@/styles/Home.module.css";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useEffect } from "react";
 
 export default function SingleExpandable({ setIsSingleExpanded, index }) {
+    const animationRef = useRef([]);
+
     return (
         <>
             <div className={Style.backDrop} />
@@ -37,9 +39,16 @@ export default function SingleExpandable({ setIsSingleExpanded, index }) {
                                                 backgroundColor: "gray",
                                                 margin: "5px",
                                                 padding: "2px",
-                                                animation: "barAnimation 10s ease",
+                                                paddingLeft: "4px",
+                                                animation: `barAnimation${languageIndex} 2s ease`,
                                             }}
                                         >
+                                            <style>
+                                                {`@keyframes barAnimation${languageIndex}{
+                                                        from{width: 0},
+                                                        to{width: ${language.percentage}}
+                                                    }`}
+                                            </style>
                                             <span key={languageIndex}>
                                                 {language.name}
                                             </span>
