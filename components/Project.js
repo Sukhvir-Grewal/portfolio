@@ -18,7 +18,7 @@ export default function Project({ setView }) {
                 <Image
                     onClick={() => {
                         setIsSingleExpanded(true);
-                        setSingleExpandIndex(index)
+                        setSingleExpandIndex(index);
                     }}
                     src={`/images/projects/${ImagesArray[index].image}`}
                     layout="fill"
@@ -46,13 +46,21 @@ export default function Project({ setView }) {
 
             {isExpanded && (
                 <>
-                    <Expandable setIsExpanded={setIsExpanded} />
+                    <Expandable
+                        setIsExpanded={setIsExpanded}
+                        isSingleExpanded={isSingleExpanded}
+                        setIsSingleExpanded={setIsSingleExpanded}
+                        index={singleExpandIndex}
+                    />
                 </>
             )}
 
             {isSingleExpanded && (
                 <>
-                    <SingleExpandable setIsSingleExpanded={setIsSingleExpanded} index={singleExpandIndex}/>
+                    <SingleExpandable
+                        setIsSingleExpanded={setIsSingleExpanded}
+                        index={singleExpandIndex}
+                    />
                 </>
             )}
 
