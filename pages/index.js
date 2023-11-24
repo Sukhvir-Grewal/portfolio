@@ -32,7 +32,7 @@ export default function Home() {
     return (
         <>
             {renderView(view)}
-            <Footer />
+            {/* <Footer /> */}
         </>
     );
 }

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "components/resuable/Expandable.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1700763877074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1700763884500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-export default function Expand\n\\ No newline at end of file\n+export default function Expandable()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1700763894331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+export default function Expandable(){\r\n+    return(\r\n+        <>\r\n+            \r\n+        </>\r\n+    )\r\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1700763877074,
+            "name": "Commit-0",
+            "content": "export default function "
+        }
+    ]
+}

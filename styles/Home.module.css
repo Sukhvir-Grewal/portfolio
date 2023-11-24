@@ -1,13 +1,13 @@
 .goBackContainer{
     width: 100vw;
-    background-color: gray;
+    /* background-color: gray; */
     height: 65px;
 }
 
 .goBack{
     width: 150px;
     height: 100%;
-    background-color: rgb(63, 62, 62);
+    /* background-color: rgb(63, 62, 62); */
     display: grid;
     place-content: center;
 }
@@ -16,14 +16,116 @@
     cursor: pointer;
 }
 
+/* This is for expandable component */
+.backDrop {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    backdrop-filter: blur(10px);
+}
+
+.mainExpandedContainer {
+    height: 500px;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    z-index: 2;
+}
+
+.crossContainer {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cross {
+    cursor: pointer;
+    position: relative;
+}
+
+.expandedContainer {
+    padding: 20px;
+    border: 0.5px solid black;
+    border-radius: 10px;
+    background-color: rgb(197, 193, 193);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.customCard {
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 18rem;
+    margin: 10px;
+}
+
+.customCardBody{
+    padding: 10px;
+}
+
+.singleCustomCard{
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    
+}
+
+.singleImageContainer{
+    height: 200px;
+    display: flex;
+    display: inline-block;
+
+}
+
+.imageLanguageContainer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.singleCustomCardImage{
+    height: 200px;
+    min-width: 18rem;
+    object-fit: contain;
+    object-position: center;
+}
+
+.mainLanguageBarContainer{
+    border: 1px solid black;
+    margin: 20px;
+    display: inline-block;
+    flex-grow: 1;
+}
+
+@keyframes barAnimation {
+    from{width: 0;}
+    to{width: 100%;}
+}
+
+/* ******************************************** */
 
 @media (max-width: 600px) {
-    
+   
     .goBack{
         width: 100px;
         height: 100%;
-        background-color: rgb(63, 62, 62);
         display: grid;
         place-content: center;
     }
+
+    .singleCustomCardImage{
+        height: 200px;
+        width: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+
 }

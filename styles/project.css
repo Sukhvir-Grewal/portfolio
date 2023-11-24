@@ -1,6 +1,6 @@
 .projects-container {
     height: 230px;
-    background-color: rgb(107, 106, 106);
+    /* background-color: rgb(107, 106, 106); */
     margin-left: 150px;
     margin-right: 60px;
     overflow-x: auto;
@@ -14,14 +14,36 @@
     justify-content: space-between;
 }
 
-.project{
+.project {
+    position: relative; /* Required for layout='fill' */
     height: 90%;
     width: 280px;
     border: 1px solid black;
     margin: 10px;
     display: inline-block;
+    overflow: hidden;
 }
-    
+
+.project > img:hover {
+    transform: scale(2);
+    filter: blur(2px) brightness(0.4);
+    transition: transform 0.3s ease;
+}
+.project img {
+    transition: transform 0.3s ease;
+}
+
+.project h2 {
+    position: relative; /* Create a stacking context */
+    z-index: 1; /* Place it above the image */
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    display: none;
+}
+.project:hover h2 {
+    display: block; /* Show h2 when project is hovered */
+}
+
 @media (max-width: 600px) {
     .projects-container {
         height: 230px;
@@ -29,7 +51,7 @@
         background-color: rgb(107, 106, 106);
         margin-left: 0;
     }
-    
+
     .main-about-container {
         display: flex;
         flex-direction: column;

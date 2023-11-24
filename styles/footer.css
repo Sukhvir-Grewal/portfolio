@@ -1,7 +1,7 @@
 .footer-container {
     width: 100vw;
     height: 150px;
-    background-color: #D3D3D3;
+    /* background-color: #D3D3D3; */
     position: fixed;
     bottom: 0;
     display: flex; 
@@ -17,7 +17,7 @@
 .dialogs-container{
     height: 100%;
     width: 100vw;
-    background-color: #808080;
+    /* background-color: #808080; */
     padding: 20px;
 }
 
@@ -33,7 +33,7 @@
 .dialogs{
     height: 150px;
     width: 100%;
-    background-color: #5f5d5d;
+    /* background-color: #5f5d5d; */
     font-size: larger;
 }
 
@@ -50,7 +50,7 @@
     .dialogs{
         height: 150px;
         width: 100%;
-        background-color: #5f5d5d;
+        /* background-color: #5f5d5d; */
         font-size: large;
     }
 }
