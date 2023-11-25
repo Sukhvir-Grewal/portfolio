@@ -12,18 +12,18 @@ export default function Project({ setView }) {
 
     function renderProjectImages(count) {
         // Create an array with `count` elements and map over it
-        return Array.from({ length: count }, (_, index) => (
-            <div key={index} className="project">
-                <h2>{ImagesArray[index].name}</h2>
+        return Array.from({ length: count }, (_, ImageIndex) => (
+            <div key={ImageIndex} className="project">
+                <h2>{ImagesArray[ImageIndex].name}</h2>
                 <Image
                     onClick={() => {
                         setIsSingleExpanded(true);
-                        setSingleExpandIndex(index);
+                        setSingleExpandIndex(ImageIndex);
                     }}
-                    src={`/images/projects/${ImagesArray[index].image}`}
+                    src={`/images/projects/${ImagesArray[ImageIndex].image}`}
                     layout="fill"
                     objectFit="cover"
-                    alt={`Project ${index + 1}`}
+                    alt={`Project ${ImageIndex + 1}`}
                 />
             </div>
         ));
@@ -48,8 +48,6 @@ export default function Project({ setView }) {
                 <>
                     <Expandable
                         setIsExpanded={setIsExpanded}
-                        isSingleExpanded={isSingleExpanded}
-                        setIsSingleExpanded={setIsSingleExpanded}
                     />
                 </>
             )}

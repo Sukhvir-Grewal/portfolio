@@ -7,16 +7,14 @@ import { useState } from "react";
 
 export default function Expandable({
     setIsExpanded,
-    isSingleExpanded,
-    setIsSingleExpanded,
 }) {
+    const [isSingleExpanded, setIsSingleExpanded] = useState(false);
     const [singleExpandIndex, setSingleExpandIndex] = useState(0);
 
     const handleCardClick = (cardIndex) => {
         setSingleExpandIndex(cardIndex);
         setIsSingleExpanded(true);
     };
-
 
     return (
         <>
@@ -54,7 +52,7 @@ export default function Expandable({
                                         >
                                             <Card.Img
                                                 onClick={() => {
-                                                    handleCardClick(cardIndex)
+                                                    handleCardClick(cardIndex);
                                                 }}
                                                 style={{
                                                     objectFit: "cover",
