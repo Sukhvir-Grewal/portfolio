@@ -9,6 +9,7 @@ export default function SingleExpandable({ setIsSingleExpanded, index }) {
 
     return (
         <>
+            {console.log(index)}
             <div className={Style.backDrop} />
 
             <div className={Style.mainExpandedContainer}>

@@ -50,7 +50,6 @@ export default function Project({ setView }) {
                         setIsExpanded={setIsExpanded}
                         isSingleExpanded={isSingleExpanded}
                         setIsSingleExpanded={setIsSingleExpanded}
-                        index={singleExpandIndex}
                     />
                 </>
             )}

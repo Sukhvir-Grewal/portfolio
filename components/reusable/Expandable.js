@@ -3,20 +3,28 @@ import { Card, CardGroup } from "react-bootstrap";
 import { Image } from "react-bootstrap";
 import Style from "@/styles/Home.module.css";
 import SingleExpandable from "./SingleExpandable";
+import { useState } from "react";
 
 export default function Expandable({
     setIsExpanded,
     isSingleExpanded,
     setIsSingleExpanded,
-    index,
 }) {
+    const [singleExpandIndex, setSingleExpandIndex] = useState(0);
+
+    const handleCardClick = (cardIndex) => {
+        setSingleExpandIndex(cardIndex);
+        setIsSingleExpanded(true);
+    };
+
+
     return (
         <>
             {isSingleExpanded ? (
                 <>
                     <SingleExpandable
                         setIsSingleExpanded={setIsSingleExpanded}
-                        index={index}
+                        index={singleExpandIndex}
                     />
                 </>
             ) : (
@@ -40,17 +48,20 @@ export default function Expandable({
                                 {Array.from(
                                     { length: ImagesArray.length },
                                     (_, cardIndex) => (
-                                        <Card className={Style.customCard}>
+                                        <Card
+                                            key={cardIndex}
+                                            className={Style.customCard}
+                                        >
                                             <Card.Img
-                                                onClick={() =>
-                                                    setIsSingleExpanded(true)
-                                                }
+                                                onClick={() => {
+                                                    handleCardClick(cardIndex)
+                                                }}
                                                 style={{
                                                     objectFit: "cover",
                                                     objectPosition: "center",
                                                     height: "200px",
                                                     width: "100%",
-                                                    cursor:"pointer"
+                                                    cursor: "pointer",
                                                 }}
                                                 src={`/images/projects/${ImagesArray[cardIndex].image}`}
                                             />
