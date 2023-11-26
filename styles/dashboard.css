@@ -1,4 +1,4 @@
-.main-dashBoard-container{
+.main-dashBoard-container {
     width: 100vw;
     height: calc(100dvh - 200px);
     padding: 20px;
@@ -6,7 +6,7 @@
     position: fixed;
 }
 
-.left-particles{
+.left-particles {
     height: 400px;
     width: 40vw;
     /* background-color: rgb(122, 122, 122); */
@@ -14,18 +14,19 @@
     margin-right: 20px;
 }
 
-.left-particles, .dashboard-container {
+.left-particles,
+.dashboard-container {
     vertical-align: top;
 }
 
-.dashboard-container{
+.dashboard-container {
     height: 400px;
     width: calc(100vw - 45vw);
     /* background-color: rgb(122, 122, 122); */
     display: inline-block;
 }
 
-.name-tag-container{
+.name-tag-container {
     width: 100%;
     height: 66.6px;
     /* background-color: rgb(105, 105, 105); */
@@ -33,15 +34,17 @@
     justify-content: space-between;
 }
 
-.name-tag{
+.name-tag {
     width: 150px;
     height: 100%;
     /* background-color: rgb(90, 89, 89); */
     font-size: larger;
     display: inline-block;
+    display: flex;
+    align-items: center;
 }
 
-.menu-container{
+.menu-container {
     min-height: 66.6px;
     width: 100%;
     /* background-color: rgb(68, 67, 67); */
@@ -49,29 +52,31 @@
     padding-right: 150px;
 }
 
-.options{
+.options {
     height: 66.6px;
     /* background-color: rgb(58, 57, 57); */
-    border:1px solid white;
+    border: 1px solid white;
 }
 
-.expand{
+.expand {
     cursor: pointer;
 }
 
+
+
 @media (max-width: 600px) {
-    .main-dashBoard-container{
+    .main-dashBoard-container {
         width: 100vw;
         height: calc(100dvh - 200px);
         display: flex;
         padding: 20px;
     }
 
-    .left-particles{
-       display: none;
+    .left-particles {
+        display: none;
     }
-    
-    .dashboard-container{
+
+    .dashboard-container {
         height: 100%;
         width: 100%;
         /* background-color: rgb(122, 122, 122); */
@@ -79,30 +84,30 @@
         flex-direction: column;
         place-content: center;
     }
-    .name-tag-container{
+    .name-tag-container {
         width: 100%;
         height: 66.6px;
         /* background-color: rgb(105, 105, 105); */
     }
-    
-    .name-tag{
+
+    .name-tag {
         width: 100px;
         height: 100%;
         /* background-color: rgb(90, 89, 89); */
         display: inline-block;
     }
-    
-    .menu-container{
+
+    .menu-container {
         min-height: 66.6px;
         width: 100%;
         /* background-color: rgb(68, 67, 67); */
         padding-left: 100px;
         padding-right: 100px;
     }
-    
-    .options{
+
+    .options {
         height: 66.6px;
         /* background-color: rgb(58, 57, 57); */
-        border:1px solid white;
+        border: 1px solid white;
     }
 }

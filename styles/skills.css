@@ -1,19 +1,24 @@
 .skills-container {
-    height: 100%;
-    width: 380px;
+    position: absolute; 
+    height: 350px;
+    width: 350px;
     margin-left: 150px;
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
-    gap: 10px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: spin 10s infinite linear;
 }
 
 .skill {
+    position: absolute; /* Set to absolute */
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    box-sizing: border-box;
+    animation: counter-spin 10s infinite linear;
 }
 
 .expand-container {
@@ -22,6 +27,32 @@
     justify-content: center;
     grid-column: 2/4;
 }
+
+.percentage-container{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    position: absolute;
+    animation: counter-spin 10s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes counter-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
 @media (max-width: 600px) {
     .main-about-container {
         margin-left: 0;
@@ -29,13 +60,11 @@
         background-color: gainsboro;
     }
     .skills-container {
-        height: 100%;
-        width: 380px;
-        margin-left: auto;
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-columns: repeat(4, 1fr);
-        justify-content: center;
-        gap: 10px;
+        position: absolute; 
+        height: 350px;
+        width: 350px;
+        margin-left: 40px;
+        border-radius: 50%;
+        box-sizing: border-box;
     }
 }
