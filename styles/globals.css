@@ -18,3 +18,9 @@ a {
   text-decoration: none;
 }
 
+@font-face {
+  font-family: 'Knight';
+  src: url('/fonts/Knight.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

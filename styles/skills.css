@@ -1,5 +1,5 @@
 .skills-container {
-    position: absolute; 
+    position: absolute;
     height: 350px;
     width: 350px;
     margin-left: 150px;
@@ -19,6 +19,15 @@
     width: 60px;
     box-sizing: border-box;
     animation: counter-spin 10s infinite linear;
+    cursor: pointer;
+}
+
+.skill:hover img {
+    transform: scale(1.5);
+    filter: drop-shadow(1px 1px 3px black);
+}
+.skill img {
+    transition: transform 0.3s ease;
 }
 
 .expand-container {
@@ -28,14 +37,61 @@
     grid-column: 2/4;
 }
 
-.percentage-container{
-    height: 50px;
-    width: 50px;
-    background-color: red;
-    position: absolute;
-    animation: counter-spin 10s infinite linear;
+.skill-shadow {
+    filter: drop-shadow(1px 1px 3px black);
 }
 
+.percentage-container {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    animation: counter-spin 10s infinite linear, glitch 500ms infinite linear;
+    font-size: xx-large;
+    /* font-family: 'Knight', sans-serif; */
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+        -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+        0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* This is from youtube video: https://codepen.io/kevinpowell/pen/YzqerQm */
+@keyframes glitch {
+    0% {
+        text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+            -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+            -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    14% {
+        text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+            -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+            -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    15% {
+        text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+            0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+            -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    49% {
+        text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+            0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+            -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    50% {
+        text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+            0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    99% {
+        text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+            0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    100% {
+        text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+            -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+            -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+}
 @keyframes spin {
     from {
         transform: rotate(0deg);
@@ -44,6 +100,7 @@
         transform: rotate(360deg);
     }
 }
+
 @keyframes counter-spin {
     from {
         transform: rotate(0deg);
@@ -57,10 +114,9 @@
     .main-about-container {
         margin-left: 0;
         height: 380px;
-        background-color: gainsboro;
     }
     .skills-container {
-        position: absolute; 
+        position: absolute;
         height: 350px;
         width: 350px;
         margin-left: 40px;

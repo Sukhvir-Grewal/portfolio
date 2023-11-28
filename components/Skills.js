@@ -1,3 +1,4 @@
+import { languageArray } from "@/storage";
 import Style from "@/styles/Home.module.css";
 import Image from "next/image";
 import { useEffect } from "react";
@@ -37,6 +38,31 @@ export default function Skills({ setView }) {
 
         positionSkills();
     }, []);
+
+    function handleLanguageClick(name) {
+        const perContainer = document.querySelector(".percentage-container");
+        const percentage = languageArray.find(
+            (language) => language.name === name
+        )?.percentage;
+        perContainer.innerHTML = `${percentage}%`;
+
+        const skill = document.querySelectorAll(".skill");
+        // Remove skill-shadow class from all images
+        document.querySelectorAll(".skill-shadow").forEach((img) => {
+            img.classList.remove("skill-shadow");
+            img.style.transform  = "scale(1)"
+        });
+
+        // Add skill-shadow class to the clicked image
+        const clickedImage = document.querySelector(
+            `.skill img[data-name="${name}"]`
+        );
+        if (clickedImage) {
+            clickedImage.classList.add("skill-shadow");
+            clickedImage.style.transform  = "scale(1.5)"
+        }
+    }
+
     return (
         <>
             <div className={Style.goBackContainer}>
@@ -61,35 +87,45 @@ export default function Skills({ setView }) {
                 <div className="skills-container">
                     <div className="skill">
                         <Image
+                            onClick={() => handleLanguageClick("c")}
                             src="/images/skills/c.png"
+                            data-name="c"
                             height={50}
                             width={50}
                         />
                     </div>
                     <div className="skill">
                         <Image
+                            onClick={() => handleLanguageClick("c++")}
                             src="/images/skills/c++.png"
+                            data-name="c++"
                             height={50}
                             width={50}
                         />
                     </div>
                     <div className="skill">
                         <Image
+                            onClick={() => handleLanguageClick("python")}
                             src="/images/skills/python.png"
+                            data-name="python"
                             height={50}
                             width={50}
                         />
                     </div>
                     <div className="skill">
                         <Image
+                            onClick={() => handleLanguageClick("javaScript")}
                             src="/images/skills/javaScript.png"
+                            data-name="javaScript"
                             height={50}
                             width={50}
                         />
                     </div>
                     <div className="skill">
                         <Image
+                            onClick={() => handleLanguageClick("nodeJs")}
                             src="/images/skills/nodeJs.png"
+                            data-name="nodeJs"
                             height={50}
                             width={50}
                         />
@@ -97,40 +133,51 @@ export default function Skills({ setView }) {
 
                     <div className="skill">
                         <Image
+                            onClick={() => handleLanguageClick("reactJs")}
                             src="/images/skills/reactJs.png"
+                            data-name="reactJs"
                             height={50}
                             width={50}
                         />
                     </div>
                     <div className="skill">
                         <Image
+                            onClick={() => handleLanguageClick("nextJs")}
                             src="/images/skills/nextJs.png"
+                            data-name="nextJs"
                             height={50}
                             width={50}
                         />
                     </div>
                     <div className="skill">
                         <Image
+                            onClick={() => handleLanguageClick("html")}
                             src="/images/skills/html.png"
+                            data-name="html"
                             height={50}
                             width={50}
                         />
                     </div>
                     <div className="skill">
                         <Image
+                            onClick={() => handleLanguageClick("css")}
                             src="/images/skills/css.png"
+                            data-name="css"
                             height={50}
                             width={50}
                         />
                     </div>
                     <div className="skill">
                         <Image
+                            onClick={() => handleLanguageClick("sql")}
                             src="/images/skills/sql.png"
+                            data-name="sql"
                             height={50}
                             width={50}
                         />
                     </div>
-                    <div className="percentage-container"></div>
+
+                    <div className="percentage-container">Loading..</div>
                 </div>
 
                 <div className="name-tag-container">

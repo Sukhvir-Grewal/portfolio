@@ -1,18 +1,48 @@
 import Style from "@/styles/Home.module.css";
 import Image from "next/image";
+import { useEffect } from "react";
 
-export default function About({setView}) {
+export default function About({ setView }) {
+    useEffect(() => {
+        function makeItRain() {
+            const dropsContainer = document.querySelector(".drops-container");
+            const bodyWidth = document.body.offsetWidth;
+
+            setInterval(() => {
+                // Adjust the number of drops as needed
+                for (var i = 0; i < 10; i++) {
+                    const drop = document.createElement("div");
+                    drop.classList.add("drop");
+                    drop.style.left = Math.random() * bodyWidth + "px";
+                    drop.style.animation =
+                        "dropAnimation " + (Math.random() * 3 + 2) + "s linear";
+
+                    // Attach an event listener to remove the drop when animation ends
+                    drop.addEventListener("animationend", function () {
+                        this.remove();
+                    });
+
+                    dropsContainer.appendChild(drop);
+                }
+            }, 500);
+        }
+
+        makeItRain();
+    }, []);
     return (
         <>
+            <div class="drops-container"></div>
             <div className={Style.goBackContainer}>
-                <div onClick={() => setView("dashboard")} className={Style.goBack}>
-                    <Image 
+                <div
+                    onClick={() => setView("dashboard")}
+                    className={Style.goBack}
+                >
+                    <Image
                         className={Style.back}
-                        src='/images/back.png'
+                        src="/images/back.png"
                         height={50}
                         width={50}
                     />
-
                 </div>
             </div>
 
@@ -47,17 +77,19 @@ export default function About({setView}) {
                         world.
                         <br />
                         <br />
-                        My ambition is lofty yet grounded – to excel in my field. 
-                        I'm well aware that perfection in the ever-evolving realm 
-                        of technology might be a moving target, but my commitment 
-                        to strive for excellence is unwavering. My dream is not 
-                        just to secure my ideal job but to live a life that reflects
-                        my passion for programming and continuous learning.
+                        My ambition is lofty yet grounded – to excel in my
+                        field. I'm well aware that perfection in the
+                        ever-evolving realm of technology might be a moving
+                        target, but my commitment to strive for excellence is
+                        unwavering. My dream is not just to secure my ideal job
+                        but to live a life that reflects my passion for
+                        programming and continuous learning.
                         <br />
                         <br />
-                        Through this portfolio, I invite you to witness my journey, 
-                        my growth, and my aspirations in the world of computer programming.
-                        Let's explore and innovate together.
+                        Through this portfolio, I invite you to witness my
+                        journey, my growth, and my aspirations in the world of
+                        computer programming. Let's explore and innovate
+                        together.
                         <br />
                         <br />
                     </p>
