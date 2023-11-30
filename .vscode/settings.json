@@ -1,14 +1,11 @@
 {
     "files.exclude": {
-        "node_modules": true,
-        ".next": true,
-        ".vscode": true,
-        "package.json": true,
-        "package-lock.json": true,
-        "next.config.js": true,
-        "jsconfig.json": true,
-        ".gitignore": true,
         ".eslintrc.json": true,
-        ".lh": true
+        ".gitignore": true,
+        ".lh": true,
+        ".vscode": true,
+        "jsconfig.json": true,
+        "next.config.js": true,
+        "package-lock.json": true
     }
 }

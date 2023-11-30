@@ -1,30 +1,68 @@
 import Style from "@/styles/Home.module.css";
 import Image from "next/image";
+import { useForm } from "react-hook-form";
+import axios from "axios";
 
-export default function Contact({setView}){
-    return(
+export default function Contact({ setView }) {
+    const { register, handleSubmit } = useForm({
+        defaultValues: {
+            gmail: "",
+            message: "",
+        },
+    });
+
+    function submitForm(data) {
+        
+        axios
+            .post("/api/sendEmail", data)
+            .then((response) => {
+                console.log("email send successfully");
+            })
+            .catch((error) => {
+                console.log("Error sending email", error);
+            });
+    }
+    return (
         <>
+        
             <div className={Style.goBackContainer}>
-                    <div onClick={() => setView("dashboard")} className={Style.goBack}>
-                        <Image 
-                            className={Style.back}
-                            src='/images/back.png'
-                            height={50}
-                            width={50}
-                        />
-                    </div>
+                <div
+                    onClick={() => setView("dashboard")}
+                    className={Style.goBack}
+                >
+                    <Image
+                        className={Style.back}
+                        src="/images/back.png"
+                        height={50}
+                        width={50}
+                    />
+                </div>
             </div>
 
             <div className="main-about-container">
                 <div className="name-tag-container">
                     <div className="name-tag">&lt;contact&gt;</div>
                 </div>
-                
-                <div className="contact-container">
-                    <div className="contact">Email: &nbsp;<a href="mailto:namedsukhvir@gmail.com">namedsukhvir@gmail.com</a></div>
-                    <div className="contact">Phone: &nbsp;<a href="tel:+16479143066">+1&nbsp;(647)&nbsp;914&nbsp;3066</a></div>
-                    <div className="contact">LinkedIn: &nbsp;<a href="https://www.linkedin.com/in/sukhvir-dev/">https://www.linkedin.com/in/sukhvir-dev/</a></div>
-                    <div className="contact">Git HUB: &nbsp;<a href="https://github.com/Sukhvir-Grewal">https://github.com/Sukhvir-Grewal</a></div>
+
+                <div className="main-form-container">
+                    <form
+                        className="form-container"
+                        onSubmit={handleSubmit(submitForm)}
+                    >
+                        <input
+                            className="input-box"
+                            placeholder="Enter Gmail"
+                            {...register("gmail")}
+                        />
+                        <textarea
+                            className="tet-box"
+                            placeholder="Ask Me Anything"
+                            {...register("message")}
+                        />
+                        <button className="submit-button" type="submit">
+                            Send ^^
+                        </button>
+                    </form>
                 </div>
 
                 <div className="name-tag-container">
@@ -32,5 +70,5 @@ export default function Contact({setView}){
                 </div>
             </div>
         </>
-    )
+    );
 }

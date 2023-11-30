@@ -1,0 +1,54 @@
+{
+    "sourceFile": "pages/api/sendEmail.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1701281099996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1701281134701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n const emailUser = process.env.EMAIL_USER;\r\n const emailPass = process.env.EMAIL_PASS;\r\n+\r\n"
+                },
+                {
+                    "date": 1701281142020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n+require \r\n const emailUser = process.env.EMAIL_USER;\r\n const emailPass = process.env.EMAIL_PASS;\r\n \r\n"
+                },
+                {
+                    "date": 1701281147929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,4 @@\n+require('dotenv').config\r\n+const emailUser = process.env.EMAIL_USER;\r\n+const emailPass = process.env.EMAIL_PASS;\r\n+\r\n"
+                },
+                {
+                    "date": 1701281162276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+require('dotenv').config();\r\n+\r\n+const emailUser = process.env.EMAIL_USER;\r\n+const emailPass = process.env.EMAIL_PASS;\r\n+\r\n+export default asx\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1701281172542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+require('dotenv').config();\r\n+\r\n+const emailUser = process.env.EMAIL_USER;\r\n+const emailPass = process.env.EMAIL_PASS;\r\n+\r\n+export default async function\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1701281179849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+require('dotenv').config();\r\n+\r\n+const emailUser = process.env.EMAIL_USER;\r\n+const emailPass = process.env.EMAIL_PASS;\r\n+\r\n+export default async function handler(req, res){}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1701281185190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,8 @@\n+require('dotenv').config();\r\n+\r\n+const emailUser = process.env.EMAIL_USER;\r\n+const emailPass = process.env.EMAIL_PASS;\r\n+\r\n+export default async function handler(req, res){\r\n+    if()\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1701281191863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n const emailUser = process.env.EMAIL_USER;\r\n const emailPass = process.env.EMAIL_PASS;\r\n \r\n export default async function handler(req, res){\r\n-    if(req.method)\r\n+    if(req.method )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1701281197831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,8 @@\n+require('dotenv').config();\r\n+\r\n+const emailUser = process.env.EMAIL_USER;\r\n+const emailPass = process.env.EMAIL_PASS;\r\n+\r\n+export default async function handler(req, res){\r\n+    if(req.method === 'POST')\r\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1701281099995,
+            "name": "Commit-0",
+            "content": "const emailUser = process.env.EMAIL_USER;\r\nconst emailPass = process.env.EMAIL_PASS;\r\n"
+        }
+    ]
+}

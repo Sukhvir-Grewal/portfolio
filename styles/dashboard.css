@@ -29,7 +29,6 @@
 .name-tag-container {
     width: 100%;
     height: 66.6px;
-    /* background-color: rgb(105, 105, 105); */
     display: flex;
     justify-content: space-between;
 }
@@ -37,11 +36,11 @@
 .name-tag {
     width: 150px;
     height: 100%;
-    /* background-color: rgb(90, 89, 89); */
     font-size: larger;
     display: inline-block;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .menu-container {
@@ -61,8 +60,6 @@
 .expand {
     cursor: pointer;
 }
-
-
 
 @media (max-width: 600px) {
     .main-dashBoard-container {
@@ -95,6 +92,9 @@
         height: 100%;
         /* background-color: rgb(90, 89, 89); */
         display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .menu-container {
