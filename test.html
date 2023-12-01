@@ -1,55 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Conveyor Belt with SVG</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Graffiti Explosion</title>
         <style>
             body {
                 margin: 0;
+                height: 100vh;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 100vh;
-                background-color: #f0f0f0;
+                background-color: black; /* To make white text visible */
             }
-
-            .wheel {
-                fill: gray;
-                animation: spin 3s linear infinite;
-            }
-
-            .belt {
-                fill: none;
-                stroke: black;
-                stroke-width: 5;
-            }
-
-            @keyframes spin {
-                from {
-                    transform: rotate(0deg);
-                }
-                to {
-                    transform: rotate(360deg);
-                }
+            .text {
+                font-size: xx-large;
+                color: white;
+                border-right: 2px solid white; /* Cursor-like effect */
             }
         </style>
     </head>
     <body>
-        <svg width="400" height="100" viewBox="0 0 400 100">
-            <!-- Wheels -->
-            <circle class="wheel" cx="50" cy="50" r="20" />
-            <circle class="wheel" cx="200" cy="50" r="20" />
-            <circle class="wheel" cx="350" cy="50" r="20" />
+        <div class="container">
+            <p class="text" id="text"></p>
+        </div>
 
-            <!-- Belt -->
-            <path
-                class="belt"
-                d="M 30,50 A 20,20 0 0,1 70,50 
-                           M 70,50 L 330,50
-                           M 330,50 A 20,20 0 0,1 370,50 
-                           M 370,50 L 370,70 
-                           M 370,70 L 30,70 
-                           M 30,70 L 30,50"
-            />
-        </svg>
+        <script>
+            const textElement = document.getElementById("text");
+            const fullText =
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit...";
+            let currentIndex = 0;
+
+            function typeEffect() {
+                if (currentIndex < fullText.length) {
+                    textElement.innerHTML += fullText.charAt(currentIndex);
+                    currentIndex++;
+                    setTimeout(typeEffect, 50); // Adjust typing speed
+                }
+            }
+
+            typeEffect();
+        </script>
     </body>
 </html>

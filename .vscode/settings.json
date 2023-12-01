@@ -7,5 +7,9 @@
         "jsconfig.json": true,
         "next.config.js": true,
         "package-lock.json": true
-    }
+    },
+    "cSpell.words": [
+        "lightgreen",
+        "typer"
+    ]
 }

@@ -5,26 +5,53 @@ import DashBoard from "@/components/DashBoard";
 import Project from "@/components/Project";
 import Skills from "@/components/Skills";
 import { useEffect, useState } from "react";
+import { useDialog } from "@/globalContext/DialogContext";
+import dialogsArray from "@/storage/dialogsArray";
 
 export default function Home() {
     const [view, setView] = useState("dashboard");
+    const { currentDialog, setCurrentDialog } = useDialog();
 
-    useEffect(()=>{
+    useEffect(() => {
         renderView();
-    }, [view])
+    }, [view]);
 
     function renderView() {
         switch (view) {
             case "dashboard":
-                return <DashBoard setView={setView}/>;
+                return (
+                    <>
+                        {setCurrentDialog(dialogsArray.dashBoardDialogs[0])}
+                        <DashBoard setView={setView} />
+                    </>
+                );
             case "about":
-                return <About setView={setView}/>;
+                return (
+                    <>
+                        {setCurrentDialog(dialogsArray.about[0])}
+                        <About setView={setView} />
+                    </>
+                );
             case "contact":
-                return <Contact setView={setView}/>;
+                return (
+                    <>
+                        <Contact setView={setView} />
+                    </>
+                );
             case "project":
-                return <Project setView={setView}/>;
+                return (
+                    <>
+                        {setCurrentDialog(dialogsArray.projects[0])}
+                        <Project setView={setView} />
+                    </>
+                );
             case "skills":
-                return <Skills setView={setView}/>;
+                return (
+                    <>
+                        {setCurrentDialog(dialogsArray.skills[0])}
+                        <Skills setView={setView} />
+                    </>
+                );
             default:
                 return null;
         }
@@ -32,7 +59,7 @@ export default function Home() {
     return (
         <>
             {renderView(view)}
-            {/* <Footer /> */}
+            <Footer />
         </>
     );
 }

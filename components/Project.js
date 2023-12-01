@@ -1,7 +1,7 @@
 import Style from "@/styles/Home.module.css";
 import Image from "next/image";
 import { useState } from "react";
-import ImagesArray from "@/storage";
+import ImagesArray from "@/storage/ImagesArray";
 import Expandable from "./reusable/Expandable";
 import SingleExpandable from "./reusable/SingleExpandable";
 

@@ -3,6 +3,8 @@ import Image from "next/image";
 import { useEffect } from "react";
 
 export default function About({ setView }) {
+
+
     useEffect(() => {
         function makeItRain() {
             const dropsContainer = document.querySelector(".drops-container");

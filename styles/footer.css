@@ -4,24 +4,25 @@
     /* background-color: #D3D3D3; */
     position: fixed;
     bottom: 0;
-    display: flex; 
+    display: flex;
 }
 .image-container {
     width: 332px;
     height: 100%;
-    background-color: #C0C0C0;
+    background-color: #c0c0c0;
     position: relative;
     overflow: visible;
 }
 
-.dialogs-container{
+.main-dialogs-container {
     height: 100%;
     width: 100vw;
-    /* background-color: #808080; */
+    background-color: #808080;
     padding: 20px;
+    display: inline-block;
 }
 
-.myImg{
+.myImg {
     position: absolute;
     z-index: 10;
     top: -50px; /* Adjust this value to get the desired 3D effect */
@@ -30,15 +31,28 @@
     height: 450px;
     width: 450px;
 }
-.dialogs{
-    height: 150px;
-    width: 100%;
-    /* background-color: #5f5d5d; */
-    font-size: larger;
+
+.dialogs-container {
+    display: inline-block;
+}
+
+.dialogs {
+    font-size: large;
+    color: white;
+    border-right: 2px solid white; /* Cursor-like effect */
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; /* Full width to reveal all text */
+    }
 }
 
 @media (max-width: 600px) {
-    .myImg{
+    .myImg {
         position: absolute;
         z-index: 10;
         top: -50px; /* Adjust this value to get the desired 3D effect */
@@ -48,9 +62,6 @@
         width: 400px;
     }
     .dialogs{
-        height: 150px;
-        width: 100%;
-        /* background-color: #5f5d5d; */
-        font-size: large;
+        font-size: 15px;
     }
 }

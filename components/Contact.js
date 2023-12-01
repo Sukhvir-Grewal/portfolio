@@ -2,9 +2,41 @@ import Style from "@/styles/Home.module.css";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { useEffect, useState } from "react";
 
 export default function Contact({ setView }) {
-    const { register, handleSubmit } = useForm({
+    const [showLoading, setShowLoading] = useState(false);
+
+    useEffect(() => {
+        if (showLoading) {
+            const loadingContainer =
+                document.querySelector(".loading-container");
+            const formContainer = document.querySelector(".form-container");
+
+            const loadingIcon = document.querySelector(".loadingIcon");
+            const tickIcon = document.querySelector(".tick");
+
+            loadingContainer.style.display = "block";
+            loadingContainer.style.display = "grid";
+            formContainer.style.filter = "blur(5px)";
+
+            setTimeout(() => {
+                loadingIcon.style.display = "none";
+                tickIcon.style.display = "block";
+                tickIcon.classList.add("tickExplosion");
+            }, 1500);
+
+            setTimeout(() => {
+                loadingIcon.style.display = "block";
+                tickIcon.style.display = "none";
+                loadingContainer.style.display = "none";
+                formContainer.style.filter = "blur(0px)";
+            }, 3000);
+            setShowLoading(false);
+        }
+    }, [showLoading]);
+
+    const { register, handleSubmit, reset } = useForm({
         defaultValues: {
             gmail: "",
             message: "",
@@ -12,7 +44,8 @@ export default function Contact({ setView }) {
     });
 
     function submitForm(data) {
-        
+        reset();
+        setShowLoading(true);
         axios
             .post("/api/sendEmail", data)
             .then((response) => {
@@ -24,7 +57,6 @@ export default function Contact({ setView }) {
     }
     return (
         <>
-        
             <div className={Style.goBackContainer}>
                 <div
                     onClick={() => setView("dashboard")}
@@ -50,11 +82,13 @@ export default function Contact({ setView }) {
                         onSubmit={handleSubmit(submitForm)}
                     >
                         <input
+                            required
                             className="input-box"
                             placeholder="Enter Gmail"
                             {...register("gmail")}
                         />
                         <textarea
+                            required
                             className="tet-box"
                             placeholder="Ask Me Anything"
                             {...register("message")}
@@ -63,6 +97,27 @@ export default function Contact({ setView }) {
                             Send ^^
                         </button>
                     </form>
+                    <div className="loading-container">
+                        <i
+                            class="loadingIcon fa-solid fa-circle-notch fa-spin "
+                            style={{
+                                fontSize: "40px",
+                                color: "lightgreen",
+                                textShadow:
+                                    "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000",
+                            }}
+                        ></i>
+                        <i
+                            class="tick fa-solid fa-check"
+                            style={{
+                                fontSize: "40px",
+                                color: "lightgreen",
+                                display: "none",
+                                textShadow:
+                                    "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000",
+                            }}
+                        ></i>
+                    </div>
                 </div>
 
                 <div className="name-tag-container">

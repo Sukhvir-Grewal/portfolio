@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 14,
+            "activePatchIndex": 21,
             "patches": [
                 {
                     "date": 1697582788328,
@@ -64,6 +64,34 @@
                 {
                     "date": 1700584413064,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n import '@/styles/globals.css'\n import '@/styles/footer.css'\n-// import '@/styles/dashboard.css'\n+import '@/styles/dashboard.css'\n import '@/styles/about.css'\n-// import '@/styles/project.css'\n-// import '@/styles/contact.css'\n-// import '@/styles/skills.css'\n+import '@/styles/project.css'\n+import '@/styles/contact.css'\n+import '@/styles/skills.css'\n \n export default function App({ Component, pageProps }) {\n   return <Component {...pageProps} />\n }\n"
+                },
+                {
+                    "date": 1701389260243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,9 @@\n import '@/styles/project.css'\n import '@/styles/contact.css'\n import '@/styles/skills.css'\n \n+import \n+\n export default function App({ Component, pageProps }) {\n   return <Component {...pageProps} />\n }\n"
+                },
+                {
+                    "date": 1701389269395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n import '@/styles/project.css'\n import '@/styles/contact.css'\n import '@/styles/skills.css'\n \n-import \n+import { DialogProvider } from '@/globalContext/DialogContext'\n \n export default function App({ Component, pageProps }) {\n+  \n   return <Component {...pageProps} />\n }\n"
+                },
+                {
+                    "date": 1701389276485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,6 @@\n \n import { DialogProvider } from '@/globalContext/DialogContext'\n \n export default function App({ Component, pageProps }) {\n-  \n-  return <Component {...pageProps} />\n+  return (<Component {...pageProps} />)\n }\n"
+                },
+                {
+                    "date": 1701389285666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n-import '@/styles/globals.css'\n-import '@/styles/footer.css'\n-import '@/styles/dashboard.css'\n-import '@/styles/about.css'\n-import '@/styles/project.css'\n-import '@/styles/contact.css'\n-import '@/styles/skills.css'\n+import \"@/styles/globals.css\";\n+import \"@/styles/footer.css\";\n+import \"@/styles/dashboard.css\";\n+import \"@/styles/about.css\";\n+import \"@/styles/project.css\";\n+import \"@/styles/contact.css\";\n+import \"@/styles/skills.css\";\n \n-import { DialogProvider } from '@/globalContext/DialogContext'\n+import { DialogProvider } from \"@/globalContext/DialogContext\";\n \n export default function App({ Component, pageProps }) {\n-  return (<Component {...pageProps} />)\n+    return (<Component {...pageProps} />);\n }\n"
+                },
+                {
+                    "date": 1701389292687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,8 @@\n \n import { DialogProvider } from \"@/globalContext/DialogContext\";\n \n export default function App({ Component, pageProps }) {\n-    return (<Component {...pageProps} />);\n+    return (\n+      \n+    <Component {...pageProps} />);\n }\n"
+                },
+                {
+                    "date": 1701389298501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,9 @@\n import { DialogProvider } from \"@/globalContext/DialogContext\";\n \n export default function App({ Component, pageProps }) {\n     return (\n-      \n+      <DialogProvider>\n+        \n+      </DialogProvider>\n     <Component {...pageProps} />);\n }\n"
+                },
+                {
+                    "date": 1701389303567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n \n export default function App({ Component, pageProps }) {\n     return (\n       <DialogProvider>\n-        \n+        <Component {...pageProps} />\n       </DialogProvider>\n-    <Component {...pageProps} />);\n+    );\n }\n"
                 }
             ],
             "date": 1697582788328,

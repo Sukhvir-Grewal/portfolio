@@ -1,4 +1,4 @@
-import ImagesArray from "@/storage";
+import ImagesArray from "@/storage/ImagesArray";
 import { Card, CardGroup } from "react-bootstrap";
 import { Image } from "react-bootstrap";
 import Style from "@/styles/Home.module.css";

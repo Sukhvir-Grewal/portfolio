@@ -1,0 +1,22 @@
+{
+    "sourceFile": "storage/languageArray.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1701387007653,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1701387023403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,7 @@\n     { name: \"nodeJs\", percentage: 85 },\r\n     { name: \"python\", percentage: 70 },\r\n     { name: \"reactJs\", percentage: 75 },\r\n     { name: \"sql\", percentage: 65 },\r\n-];\n\\ No newline at end of file\n+];\r\n+\r\n+export default ImagesArray;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1701387007653,
+            "name": "Commit-0",
+            "content": "export const languageArray = [\r\n    { name: \"c\", percentage: 60 },\r\n    { name: \"c++\", percentage: 75 },\r\n    { name: \"css\", percentage: 60 },\r\n    { name: \"html\", percentage: 85 },\r\n    { name: \"javaScript\", percentage: 90 },\r\n    { name: \"mongoDb\", percentage: 75 },\r\n    { name: \"nextJs\", percentage: 90 },\r\n    { name: \"nodeJs\", percentage: 85 },\r\n    { name: \"python\", percentage: 70 },\r\n    { name: \"reactJs\", percentage: 75 },\r\n    { name: \"sql\", percentage: 65 },\r\n];"
+        }
+    ]
+}
