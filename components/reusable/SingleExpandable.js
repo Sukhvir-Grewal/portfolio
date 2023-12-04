@@ -2,14 +2,11 @@ import ImagesArray from "@/storage/ImagesArray";
 import { Card, CardGroup } from "react-bootstrap";
 import { Image } from "react-bootstrap";
 import Style from "@/styles/Home.module.css";
-import { useRef, useEffect } from "react";
 
 export default function SingleExpandable({ setIsSingleExpanded, index }) {
-    const animationRef = useRef([]);
 
     return (
         <>
-            {console.log(index)}
             <div className={Style.backDrop} />
 
             <div className={Style.mainExpandedContainer}>
@@ -36,6 +33,7 @@ export default function SingleExpandable({ setIsSingleExpanded, index }) {
                                 {ImagesArray[index].languages.map(
                                     (language, languageIndex) => (
                                         <div
+                                            key={languageIndex}
                                             style={{
                                                 width: `${language.percentage}%`,
                                                 backgroundColor: "gray",

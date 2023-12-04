@@ -7,7 +7,7 @@ export default function Footer({
     scriptNumber,
     handleDialogUpdateOnClick,
 }) {
-    const { currentDialog, setCurrentDialog } = useDialog();
+    const { currentDialog } = useDialog();
     const typingTimeoutRef = useRef(null);
 
     useEffect(() => {
@@ -32,6 +32,7 @@ export default function Footer({
         };
 
         function typeEffect() {
+            
             if (currentIndex < fullText.length) {
                 textElement.innerHTML += fullText.charAt(currentIndex);
                 currentIndex++;

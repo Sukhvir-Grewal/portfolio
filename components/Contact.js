@@ -105,7 +105,7 @@ export default function Contact({ setView }) {
                     </form>
                     <div className="loading-container">
                         <i
-                            class="loadingIcon fa-solid fa-circle-notch fa-spin "
+                            className="loadingIcon fa-solid fa-circle-notch fa-spin "
                             style={{
                                 fontSize: "40px",
                                 color: "lightgreen",

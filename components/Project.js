@@ -7,18 +7,27 @@ import SingleExpandable from "./reusable/SingleExpandable";
 import { useDialog } from "@/globalContext/DialogContext";
 import dialogsArray from "@/storage/dialogsArray";
 
-export default function Project({ setView }) {
+export default function Project({ setView , view}) {
     const { setCurrentDialog } = useDialog();
     const [isExpanded, setIsExpanded] = useState(false);
     const [isSingleExpanded, setIsSingleExpanded] = useState(false);
     const [singleExpandIndex, setSingleExpandIndex] = useState(0);
 
     useEffect(() => {
-        setTimeout(() => {
-            // Just to display new dialog after 2.5s
-            setCurrentDialog(dialogsArray["project"]["visitIt"]);
-        }, 2500);
+        let isMounted = true;
+    
+        const timeoutId = setTimeout(() => {
+            if (isMounted) {
+                setCurrentDialog(dialogsArray["project"]["visitIt"]);
+            }
+        }, 3000);
+    
+        return () => {
+            isMounted = false;
+            clearTimeout(timeoutId);
+        };
     }, []);
+    
 
     function renderProjectImages(count) {
         // Create an array with `count` elements and map over it
@@ -31,9 +40,16 @@ export default function Project({ setView }) {
                         setSingleExpandIndex(ImageIndex);
                     }}
                     src={`/images/projects/${ImagesArray[ImageIndex].image}`}
-                    layout="fill"
-                    objectFit="cover"
+                    height={1000}
+                    width={1000}
                     alt={`Project ${ImageIndex + 1}`}
+                    style={{
+                        objectFit: "cover",
+                        objectPosition: "center",
+                        height: "200px",
+                        width: "100%",
+                        cursor: "pointer",
+                    }}
                 />
             </div>
         ));

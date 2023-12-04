@@ -1,15 +1,15 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 import { useDialog } from "@/globalContext/DialogContext";
 import dialogsArray from "@/storage/dialogsArray";
 import { languageArray } from "@/storage/languageArray";
 import Style from "@/styles/Home.module.css";
 import Image from "next/image";
-import { createRef } from 'react';
+import { createRef } from "react";
 
-export default function Skills({ setView }) {
+export default function Skills({ setView, view }) {
     const { setCurrentDialog } = useDialog();
     const containerRef = useRef(null);
-    
+
     const skillData = [
         { name: "c", image: "/images/skills/c.png" },
         { name: "c++", image: "/images/skills/c++.png" },
@@ -28,8 +28,13 @@ export default function Skills({ setView }) {
     const skillRefs = useRef(skillData.map(() => createRef()));
 
     useEffect(() => {
-        setTimeout(() => {
-            setCurrentDialog(dialogsArray["skill"]["howToOperate"]);
+        // Create a flag to check if the component is still mounted
+        let isMounted = true;
+
+        const timeoutId = setTimeout(() => {
+            if (isMounted && view === "skill") {
+                setCurrentDialog(dialogsArray["skill"]["howToOperate"]);
+            }
         }, 2500);
 
         /*  Math Stuff which i cant do by myself so used Chat-Gtp to put the images
@@ -50,18 +55,25 @@ export default function Skills({ setView }) {
                 const angle = (index / total) * Math.PI * 2;
                 const skillRadius = ref.current.offsetWidth / 2;
 
-                const skillX = center.x + radius * Math.cos(angle) - skillRadius;
-                const skillY = center.y + radius * Math.sin(angle) - skillRadius;
+                const skillX =
+                    center.x + radius * Math.cos(angle) - skillRadius;
+                const skillY =
+                    center.y + radius * Math.sin(angle) - skillRadius;
 
                 ref.current.style.left = `${skillX}px`;
                 ref.current.style.top = `${skillY}px`;
             });
 
-            const perContainer = containerRef.current.querySelector(".percentage-container");
+            const perContainer = containerRef.current.querySelector(
+                ".percentage-container"
+            );
             if (perContainer) {
                 const perContainerRadius = perContainer.offsetWidth / 2;
-                const center = { x: containerRef.current.offsetWidth / 2, y: containerRef.current.offsetHeight / 2 };
-    
+                const center = {
+                    x: containerRef.current.offsetWidth / 2,
+                    y: containerRef.current.offsetHeight / 2,
+                };
+
                 perContainer.style.left = `${center.x - perContainerRadius}px`;
                 perContainer.style.top = `${center.y - perContainerRadius}px`;
                 perContainer.style.position = "absolute";
@@ -69,7 +81,12 @@ export default function Skills({ setView }) {
         };
 
         positionSkills();
-    }, []);
+
+        return () => {
+            isMounted = false;
+            clearTimeout(timeoutId);
+        };
+    }, [view]);
 
     function handleLanguageClick(name) {
         setCurrentDialog(dialogsArray["skill"]["ohh"]);

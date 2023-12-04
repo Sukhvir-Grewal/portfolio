@@ -14,7 +14,7 @@ export default function Home() {
     const { setCurrentDialog } = useDialog();
 
     const [numberOfVisits, setNumberOfVisits] = useState({
-        dashBoard: 1,
+        dashboard: 1,
         skill: 1,
         contact: 1,
         project: 1,
@@ -51,6 +51,7 @@ export default function Home() {
         (type) => {
             const newNumberOfVisits = { ...numberOfVisits };
             let dialog = "";
+            console.log(newNumberOfVisits.dashboard)
 
             if (dialogsArray[type] && dialogsArray[type]["script1"]) {
                 dialog = dialogsArray[type]["script1"][newNumberOfVisits[type]];
@@ -59,6 +60,7 @@ export default function Home() {
                     (newNumberOfVisits[type] + 1) %
                     dialogsArray[type]["script1"].length;
             }
+            console.log(type)
 
             setNumberOfVisits(newNumberOfVisits);
             setCurrentDialog(dialog);
@@ -79,7 +81,7 @@ export default function Home() {
             skill: Skills,
         }[view];
 
-        return ViewComponent ? <ViewComponent setView={setView} /> : null;
+        return ViewComponent ? <ViewComponent setView={setView} view={view}/> : null;
     }
 
     return (
