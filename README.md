@@ -44,8 +44,8 @@ Well, the basic setup is all set, and those components are pretty much good to g
 
 # Learnings
 
-    - I dipped my toes into the world of email sending with Nodemailer. Still unraveling its mysteries, but hey, progress!
-    - Axios made its debut in my toolkit, helping me connect with Nodemailer like a digital matchmaker.
-    - useEffect became my new frenemy, with its quirks and bugs. We've had some epic battles, but I'm learning the ropes.
-    - Drumroll, please! I unlocked the secret of creating Context, the superhero of variable-sharing between components.
-    - And then, there's useCallback, my trusty sidekick in the battle against relentless re-renders. It took a bit, but I finally cracked the code after a 5-hour showdown. 🚀📧🛡️
+    * I dipped my toes into the world of email sending with Nodemailer. Still unraveling its mysteries, but hey, progress!
+    * Axios made its debut in my toolkit, helping me connect with Nodemailer like a digital matchmaker.
+    * useEffect became my new frenemy, with its quirks and bugs. We've had some epic battles, but I'm learning the ropes.
+    * Drumroll, please! I unlocked the secret of creating Context, the superhero of variable-sharing between components.
+    * And then, there's useCallback, my trusty sidekick in the battle against relentless re-renders. It took a bit, but I finally cracked the code after a 5-hour showdown. 🚀📧🛡️
