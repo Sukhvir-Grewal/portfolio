@@ -115,18 +115,13 @@ export default function About({ setView }) {
                     <div className="name-tag">&lt;about&gt;</div>
                 </div>
                 <div ref={aboutContainerRef} className="about-container">
-                    <p>
-                        {aboutArray.map((about, index) => (
-                            <>
-                            <p key={index}>
-
-                                {about}
-                                <br />
-                                <br />
-                            </p>
-                            </>
-                        ))}
-                    </p>
+                    {aboutArray.map((about, index) => (
+                        <p key={index}>
+                            {about}
+                            <br />
+                            <br />
+                        </p>
+                    ))}
                 </div>
                 <div className="name-tag-container">
                     <div className="name-tag">&lt;/about&gt;</div>

@@ -9,21 +9,19 @@ export default function DashBoard({ setView }) {
     /*  Very simple logic to create options for my menu option-view class will 
         be used for future version to add styling for individual option
     */
-    function renderOptions() {
-        return menuOptions.map((option) => (
-            <>
-                <div className={`option option-${option.view}`}>
+        function renderOptions() {
+            return menuOptions.map((option) => (
+                <div key={option.view} className={`option option-${option.view}`}>
                     <span
-                        key={option.view}
                         style={{ cursor: "pointer" }}
                         onClick={() => setView(option.view)}
                     >
                         {option.label}
                     </span>
                 </div>
-            </>
-        ));
-    }
+            ));
+        }
+        
 
     return (
         <>
