@@ -1,14 +1,24 @@
 import Style from "@/styles/Home.module.css";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ImagesArray from "@/storage/ImagesArray";
 import Expandable from "./reusable/Expandable";
 import SingleExpandable from "./reusable/SingleExpandable";
+import { useDialog } from "@/globalContext/DialogContext";
+import dialogsArray from "@/storage/dialogsArray";
 
 export default function Project({ setView }) {
+    const { setCurrentDialog } = useDialog();
     const [isExpanded, setIsExpanded] = useState(false);
     const [isSingleExpanded, setIsSingleExpanded] = useState(false);
     const [singleExpandIndex, setSingleExpandIndex] = useState(0);
+
+    useEffect(() => {
+        setTimeout(() => {
+            // Just to display new dialog after 2.5s
+            setCurrentDialog(dialogsArray["project"]["visitIt"]);
+        }, 2500);
+    }, []);
 
     function renderProjectImages(count) {
         // Create an array with `count` elements and map over it
@@ -40,15 +50,14 @@ export default function Project({ setView }) {
                         src="/images/back.png"
                         height={50}
                         width={50}
+                        alt=""
                     />
                 </div>
             </div>
 
             {isExpanded && (
                 <>
-                    <Expandable
-                        setIsExpanded={setIsExpanded}
-                    />
+                    <Expandable setIsExpanded={setIsExpanded} />
                 </>
             )}
 
@@ -71,6 +80,7 @@ export default function Project({ setView }) {
                             src="/images/expand.png"
                             height={40}
                             width={40}
+                            alt=""
                         />
                     </div>
                 </div>

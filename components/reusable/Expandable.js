@@ -37,6 +37,7 @@ export default function Expandable({
                                 src="/images/icons/cross.png"
                                 height={50}
                                 width={50}
+                                alt=""
                             />
                         </div>
                         <div className={Style.expandedContainer}>

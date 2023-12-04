@@ -1,11 +1,14 @@
+import { useDialog } from "@/globalContext/DialogContext";
 import Style from "@/styles/Home.module.css";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import dialogsArray from "@/storage/dialogsArray";
 
 export default function Contact({ setView }) {
     const [showLoading, setShowLoading] = useState(false);
+    const { setCurrentDialog } = useDialog();
 
     useEffect(() => {
         if (showLoading) {
@@ -19,13 +22,15 @@ export default function Contact({ setView }) {
             loadingContainer.style.display = "block";
             loadingContainer.style.display = "grid";
             formContainer.style.filter = "blur(5px)";
-
+            setCurrentDialog(dialogsArray.contact['loading'])
+            
             setTimeout(() => {
                 loadingIcon.style.display = "none";
                 tickIcon.style.display = "block";
                 tickIcon.classList.add("tickExplosion");
+                setCurrentDialog(dialogsArray.contact['sent'])
             }, 1500);
-
+            
             setTimeout(() => {
                 loadingIcon.style.display = "block";
                 tickIcon.style.display = "none";
@@ -67,6 +72,7 @@ export default function Contact({ setView }) {
                         src="/images/back.png"
                         height={50}
                         width={50}
+                        alt=""
                     />
                 </div>
             </div>

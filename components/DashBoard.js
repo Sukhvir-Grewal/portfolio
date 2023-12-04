@@ -1,4 +1,30 @@
 export default function DashBoard({ setView }) {
+    const menuOptions = [
+        { label: "About Me", view: "about" },
+        { label: "Skills", view: "skill" },
+        { label: "Project", view: "project" },
+        { label: "Contact", view: "contact" },
+    ];
+
+    /*  Very simple logic to create options for my menu option-view class will 
+        be used for future version to add styling for individual option
+    */
+    function renderOptions() {
+        return menuOptions.map((option) => (
+            <>
+                <div className={`option option-${option.view}`}>
+                    <span
+                        key={option.view}
+                        style={{ cursor: "pointer" }}
+                        onClick={() => setView(option.view)}
+                    >
+                        {option.label}
+                    </span>
+                </div>
+            </>
+        ));
+    }
+
     return (
         <>
             <div className="main-dashBoard-container">
@@ -7,42 +33,9 @@ export default function DashBoard({ setView }) {
                     <div className="name-tag-container">
                         <span>&lt;menu&gt;</span>
                     </div>
-                    <div className="menu-container">
-                        <div className="options option-about">
-                            <span
-                                style={{ cursor: "pointer" }}
-                                onClick={() => setView("about")}
-                            >
-                                About Me
-                            </span>
-                        </div>
-                        <div className="options option-skills">
-                            <span
-                                style={{ cursor: "pointer" }}
-                                onClick={() => setView("skills")}
-                            >
-                                Skills
-                            </span>
-                        </div>
-                        <div className="options option-projects">
-                            <span
-                                style={{ cursor: "pointer" }}
-                                onClick={() => setView("project")}
-                            >
-                                Projects
-                            </span>
-                        </div>
-                        <div className="options option-contact">
-                            <span
-                                style={{ cursor: "pointer" }}
-                                onClick={() => setView("contact")}
-                            >
-                                Contact
-                            </span>
-                        </div>
-                    </div>
+                    <div className="menu-container">{renderOptions()}</div>
                     <div className="name-tag-container">
-                        <span>&lt;menu&gt;</span>
+                        <span>&lt;/menu&gt;</span>
                     </div>
                 </div>
             </div>

@@ -12,6 +12,7 @@
     background-color: #c0c0c0;
     position: relative;
     overflow: visible;
+    pointer-events: none;
 }
 
 .main-dialogs-container {
@@ -20,6 +21,7 @@
     background-color: #808080;
     padding: 20px;
     display: inline-block;
+    cursor: pointer;
 }
 
 .myImg {

@@ -1,45 +1,79 @@
+import { useEffect, useRef, useState } from 'react';
+import { useDialog } from "@/globalContext/DialogContext";
+import dialogsArray from "@/storage/dialogsArray";
 import { languageArray } from "@/storage/languageArray";
 import Style from "@/styles/Home.module.css";
 import Image from "next/image";
-import { useEffect } from "react";
+import { createRef } from 'react';
 
 export default function Skills({ setView }) {
+    const { setCurrentDialog } = useDialog();
+    const containerRef = useRef(null);
+    
+    const skillData = [
+        { name: "c", image: "/images/skills/c.png" },
+        { name: "c++", image: "/images/skills/c++.png" },
+        { name: "python", image: "/images/skills/python.png" },
+        { name: "javaScript", image: "/images/skills/javaScript.png" },
+        { name: "nodeJs", image: "/images/skills/nodeJs.png" },
+        { name: "reactJs", image: "/images/skills/reactJs.png" },
+        { name: "nextJs", image: "/images/skills/nextJs.png" },
+        { name: "html", image: "/images/skills/html.png" },
+        { name: "css", image: "/images/skills/css.png" },
+        { name: "sql", image: "/images/skills/sql.png" },
+        { name: "mongoDb", image: "/images/skills/mongoDb.png" },
+    ];
+
+    // Create an array of refs
+    const skillRefs = useRef(skillData.map(() => createRef()));
+
     useEffect(() => {
+        setTimeout(() => {
+            setCurrentDialog(dialogsArray["skill"]["howToOperate"]);
+        }, 2500);
+
+        /*  Math Stuff which i cant do by myself so used Chat-Gtp to put the images
+            at the corner of the circle, i tried to understand it for 3 hours but
+            no luck so positionSkills function is good but not mine, i guess that's
+            why we have AI now..
+        */
         const positionSkills = () => {
-            const container = document.querySelector(".skills-container");
-            const skills = document.querySelectorAll(".skill");
-            const containerRadius = container.offsetWidth / 2;
+            const containerRadius = containerRef.current.offsetWidth / 2;
             const skillOffset = 30; // Adjust this value to reduce the radius
             const radius = containerRadius - skillOffset; // Reduced radius
             const center = { x: containerRadius, y: containerRadius };
 
-            skills.forEach((skill, index) => {
-                const total = skills.length;
-                const angle = (index / total) * Math.PI * 2; // Angle in radians
-                const skillRadius = skill.offsetWidth / 2;
+            skillRefs.current.forEach((ref, index) => {
+                if (!ref.current) return;
 
-                const skillX =
-                    center.x + radius * Math.cos(angle) - skillRadius;
-                const skillY =
-                    center.y + radius * Math.sin(angle) - skillRadius;
+                const total = skillData.length;
+                const angle = (index / total) * Math.PI * 2;
+                const skillRadius = ref.current.offsetWidth / 2;
 
-                skill.style.left = skillX + "px";
-                skill.style.top = skillY + "px";
+                const skillX = center.x + radius * Math.cos(angle) - skillRadius;
+                const skillY = center.y + radius * Math.sin(angle) - skillRadius;
+
+                ref.current.style.left = `${skillX}px`;
+                ref.current.style.top = `${skillY}px`;
             });
-            const perContainer = document.querySelector(
-                ".percentage-container"
-            );
 
-            const perContainerRadius = perContainer.offsetWidth / 2;
-            perContainer.style.left = center.x - perContainerRadius + "px";
-            perContainer.style.top = center.y - perContainerRadius + "px";
-            perContainer.style.position = "absolute"; // Ensure it's positioned absolutely
+            const perContainer = containerRef.current.querySelector(".percentage-container");
+            if (perContainer) {
+                const perContainerRadius = perContainer.offsetWidth / 2;
+                const center = { x: containerRef.current.offsetWidth / 2, y: containerRef.current.offsetHeight / 2 };
+    
+                perContainer.style.left = `${center.x - perContainerRadius}px`;
+                perContainer.style.top = `${center.y - perContainerRadius}px`;
+                perContainer.style.position = "absolute";
+            }
         };
 
         positionSkills();
     }, []);
 
     function handleLanguageClick(name) {
+        setCurrentDialog(dialogsArray["skill"]["ohh"]);
+        console.log("click");
         const perContainer = document.querySelector(".percentage-container");
         const percentage = languageArray.find(
             (language) => language.name === name
@@ -50,7 +84,7 @@ export default function Skills({ setView }) {
         // Remove skill-shadow class from all images
         document.querySelectorAll(".skill-shadow").forEach((img) => {
             img.classList.remove("skill-shadow");
-            img.style.transform  = "scale(1)"
+            img.style.transform = "scale(1)";
         });
 
         // Add skill-shadow class to the clicked image
@@ -59,8 +93,23 @@ export default function Skills({ setView }) {
         );
         if (clickedImage) {
             clickedImage.classList.add("skill-shadow");
-            clickedImage.style.transform  = "scale(1.5)"
+            clickedImage.style.transform = "scale(1.5)";
         }
+    }
+
+    function renderSkills() {
+        return skillData.map((skill, index) => (
+            <div ref={skillRefs.current[index]} className="skill" key={index}>
+                <Image
+                    alt={skill.name}
+                    onClick={() => handleLanguageClick(skill.name)}
+                    src={skill.image}
+                    data-name={skill.name}
+                    height={50}
+                    width={50}
+                />
+            </div>
+        ));
     }
 
     return (
@@ -71,6 +120,7 @@ export default function Skills({ setView }) {
                     className={Style.goBack}
                 >
                     <Image
+                        alt=""
                         className={Style.back}
                         src="/images/back.png"
                         height={50}
@@ -84,99 +134,8 @@ export default function Skills({ setView }) {
                     <div className="name-tag">&lt;skills&gt;</div>
                 </div>
 
-                <div className="skills-container">
-                    <div className="skill">
-                        <Image
-                            onClick={() => handleLanguageClick("c")}
-                            src="/images/skills/c.png"
-                            data-name="c"
-                            height={50}
-                            width={50}
-                        />
-                    </div>
-                    <div className="skill">
-                        <Image
-                            onClick={() => handleLanguageClick("c++")}
-                            src="/images/skills/c++.png"
-                            data-name="c++"
-                            height={50}
-                            width={50}
-                        />
-                    </div>
-                    <div className="skill">
-                        <Image
-                            onClick={() => handleLanguageClick("python")}
-                            src="/images/skills/python.png"
-                            data-name="python"
-                            height={50}
-                            width={50}
-                        />
-                    </div>
-                    <div className="skill">
-                        <Image
-                            onClick={() => handleLanguageClick("javaScript")}
-                            src="/images/skills/javaScript.png"
-                            data-name="javaScript"
-                            height={50}
-                            width={50}
-                        />
-                    </div>
-                    <div className="skill">
-                        <Image
-                            onClick={() => handleLanguageClick("nodeJs")}
-                            src="/images/skills/nodeJs.png"
-                            data-name="nodeJs"
-                            height={50}
-                            width={50}
-                        />
-                    </div>
-
-                    <div className="skill">
-                        <Image
-                            onClick={() => handleLanguageClick("reactJs")}
-                            src="/images/skills/reactJs.png"
-                            data-name="reactJs"
-                            height={50}
-                            width={50}
-                        />
-                    </div>
-                    <div className="skill">
-                        <Image
-                            onClick={() => handleLanguageClick("nextJs")}
-                            src="/images/skills/nextJs.png"
-                            data-name="nextJs"
-                            height={50}
-                            width={50}
-                        />
-                    </div>
-                    <div className="skill">
-                        <Image
-                            onClick={() => handleLanguageClick("html")}
-                            src="/images/skills/html.png"
-                            data-name="html"
-                            height={50}
-                            width={50}
-                        />
-                    </div>
-                    <div className="skill">
-                        <Image
-                            onClick={() => handleLanguageClick("css")}
-                            src="/images/skills/css.png"
-                            data-name="css"
-                            height={50}
-                            width={50}
-                        />
-                    </div>
-                    <div className="skill">
-                        <Image
-                            onClick={() => handleLanguageClick("sql")}
-                            src="/images/skills/sql.png"
-                            data-name="sql"
-                            height={50}
-                            width={50}
-                        />
-                    </div>
-
+                <div ref={containerRef} className="skills-container">
+                    {renderSkills()}
                     <div className="percentage-container">Loading..</div>
                 </div>
 

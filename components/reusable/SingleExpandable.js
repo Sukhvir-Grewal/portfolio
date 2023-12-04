@@ -20,6 +20,7 @@ export default function SingleExpandable({ setIsSingleExpanded, index }) {
                         src="/images/icons/cross.png"
                         height={50}
                         width={50}
+                        alt=""
                     />
                 </div>
                 <div className={Style.expandedContainer}>
