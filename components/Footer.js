@@ -62,17 +62,19 @@ export default function Footer({
     return (
         <>
             <div className="footer-container">
-                <div className="image-container">
-                    <Image
-                        ref={imageRef}
-                        className="myImg"
-                        src={currentImage}
-                        height={1000}
-                        width={1000}
-                        alt=""
-                        priority
-                    />
-                </div>
+                {currentImage && ( // Render Image only if currentImage is ready to Go
+                    <div className="image-container">
+                        <Image
+                            ref={imageRef}
+                            className="myImg"
+                            src={currentImage}
+                            height={1000}
+                            width={1000}
+                            alt=""
+                            priority
+                        />
+                    </div>
+                )}
 
                 <div className="main-dialogs-container">
                     <div className="dialogs-container">

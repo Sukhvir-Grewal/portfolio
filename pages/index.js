@@ -63,7 +63,6 @@ export default function Home() {
             const newNumberOfVisitsForImages = { ...numberOfVisitsForImages };
             let dialog = "";
             let image = "";
-            console.log(newNumberOfVisits.dashboard);
 
             if (dialogsArray[type] && dialogsArray[type]["script1"]) {
                 dialog = dialogsArray[type]["script1"][newNumberOfVisits[type]];

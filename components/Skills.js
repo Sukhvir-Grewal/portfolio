@@ -92,7 +92,6 @@ export default function Skills({ setView, view }) {
     function handleLanguageClick(name) {
         setCurrentDialog(dialogsArray["skill"]["ohh"]);
         setCurrentImage(dialogsArray["skill"]["ohhImage"]);
-        console.log("click");
         const perContainer = document.querySelector(".percentage-container");
         const percentage = languageArray.find(
             (language) => language.name === name

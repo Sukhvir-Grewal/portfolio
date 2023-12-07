@@ -116,7 +116,7 @@ export default function Contact({ setView }) {
                             }}
                         ></i>
                         <i
-                            class="tick fa-solid fa-check"
+                            className="tick fa-solid fa-check"
                             style={{
                                 fontSize: "40px",
                                 color: "lightgreen",

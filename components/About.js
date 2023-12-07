@@ -66,7 +66,6 @@ export default function About({ setView }) {
             const maxScrollableHeight = aboutContainerRef.current.scrollHeight;
 
             if (totalScroll >= maxScrollableHeight) {
-                console.log("scrolled 100%");
                 setCurrentDialog(dialogsArray.about["finish"]);
             }
         };
