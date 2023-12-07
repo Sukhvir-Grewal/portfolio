@@ -7,7 +7,7 @@ import Image from "next/image";
 import { createRef } from "react";
 
 export default function Skills({ setView, view }) {
-    const { setCurrentDialog } = useDialog();
+    const { setCurrentDialog, setCurrentImage } = useDialog();
     const containerRef = useRef(null);
 
     const skillData = [
@@ -34,6 +34,7 @@ export default function Skills({ setView, view }) {
         const timeoutId = setTimeout(() => {
             if (isMounted && view === "skill") {
                 setCurrentDialog(dialogsArray["skill"]["howToOperate"]);
+                setCurrentImage(dialogsArray["skill"]["howToOperateImage"]);
             }
         }, 2500);
 
@@ -90,6 +91,7 @@ export default function Skills({ setView, view }) {
 
     function handleLanguageClick(name) {
         setCurrentDialog(dialogsArray["skill"]["ohh"]);
+        setCurrentImage(dialogsArray["skill"]["ohhImage"]);
         console.log("click");
         const perContainer = document.querySelector(".percentage-container");
         const percentage = languageArray.find(

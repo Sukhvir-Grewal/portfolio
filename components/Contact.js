@@ -8,7 +8,7 @@ import dialogsArray from "@/storage/dialogsArray";
 
 export default function Contact({ setView }) {
     const [showLoading, setShowLoading] = useState(false);
-    const { setCurrentDialog } = useDialog();
+    const { setCurrentDialog, setCurrentImage } = useDialog();
 
     useEffect(() => {
         if (showLoading) {
@@ -23,12 +23,14 @@ export default function Contact({ setView }) {
             loadingContainer.style.display = "grid";
             formContainer.style.filter = "blur(5px)";
             setCurrentDialog(dialogsArray.contact['loading'])
+            setCurrentImage(dialogsArray.contact['loadingImage'])
             
             setTimeout(() => {
                 loadingIcon.style.display = "none";
                 tickIcon.style.display = "block";
                 tickIcon.classList.add("tickExplosion");
                 setCurrentDialog(dialogsArray.contact['sent'])
+                setCurrentImage(dialogsArray.contact['sentImage'])
             }, 1500);
             
             setTimeout(() => {

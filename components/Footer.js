@@ -7,7 +7,7 @@ export default function Footer({
     scriptNumber,
     handleDialogUpdateOnClick,
 }) {
-    const { currentDialog } = useDialog();
+    const { currentDialog, currentImage, imageRef } = useDialog();
     const typingTimeoutRef = useRef(null);
 
     useEffect(() => {
@@ -19,7 +19,6 @@ export default function Footer({
         const fullText = currentDialog;
         let currentIndex = 0;
 
-
         if (typingTimeoutRef.current) {
             clearTimeout(typingTimeoutRef.current);
         }
@@ -28,11 +27,18 @@ export default function Footer({
         clickAbleContainer.style.cursor = "auto";
 
         const handleClick = () => {
+            imageRef.current.classList.add("fadeOut");
             handleDialogUpdateOnClick(view);
+            setTimeout(() => {
+                imageRef.current.classList.remove("fadeOut");
+                imageRef.current.classList.add("fadeIn");
+                setTimeout(() => {
+                    imageRef.current.classList.remove("fadeIn");
+                }, 200);
+            }, 200);
         };
 
         function typeEffect() {
-            
             if (currentIndex < fullText.length) {
                 textElement.innerHTML += fullText.charAt(currentIndex);
                 currentIndex++;
@@ -57,14 +63,15 @@ export default function Footer({
         <>
             <div className="footer-container">
                 <div className="image-container">
-                    {/* <Image
+                    <Image
+                        ref={imageRef}
                         className="myImg"
-                        src="/images/myImg.png"
-                        height={400}
-                        width={400}
+                        src={currentImage}
+                        height={1000}
+                        width={1000}
                         alt=""
                         priority
-                    /> */}
+                    />
                 </div>
 
                 <div className="main-dialogs-container">

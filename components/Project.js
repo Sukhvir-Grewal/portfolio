@@ -8,7 +8,7 @@ import { useDialog } from "@/globalContext/DialogContext";
 import dialogsArray from "@/storage/dialogsArray";
 
 export default function Project({ setView , view}) {
-    const { setCurrentDialog } = useDialog();
+    const { setCurrentDialog, setCurrentImage } = useDialog();
     const [isExpanded, setIsExpanded] = useState(false);
     const [isSingleExpanded, setIsSingleExpanded] = useState(false);
     const [singleExpandIndex, setSingleExpandIndex] = useState(0);
@@ -19,6 +19,7 @@ export default function Project({ setView , view}) {
         const timeoutId = setTimeout(() => {
             if (isMounted) {
                 setCurrentDialog(dialogsArray["project"]["visitIt"]);
+                setCurrentImage(dialogsArray["project"]["visitItImage"]);
             }
         }, 3000);
     
