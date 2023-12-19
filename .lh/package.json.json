@@ -1,0 +1,18 @@
+{
+    "sourceFile": "package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1703027203132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1703027203132,
+            "name": "Commit-0",
+            "content": "{\n  \"name\": \"portfolio\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint\"\n  },\n  \"dependencies\": {\n    \"axios\": \"^1.6.2\",\n    \"bootstrap\": \"^5.3.2\",\n    \"dotenv\": \"^16.3.1\",\n    \"next\": \"^14.0.4\",\n    \"node\": \"^21.2.0\",\n    \"nodemailer\": \"^6.9.7\",\n    \"react\": \"^18.2.0\",\n    \"react-bootstrap\": \"^2.9.1\",\n    \"react-dom\": \"^18.2.0\",\n    \"react-hook-form\": \"^7.48.2\"\n  },\n  \"devDependencies\": {\n    \"eslint\": \"^8\",\n    \"eslint-config-next\": \"13.5.5\"\n  }\n}\n"
+        }
+    ]
+}
