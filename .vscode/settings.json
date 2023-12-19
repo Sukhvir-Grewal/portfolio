@@ -5,8 +5,7 @@
         ".lh": true,
         ".vscode": true,
         "jsconfig.json": true,
-        "next.config.js": true,
-        "package-lock.json": true
+        "next.config.js": true
     },
     "cSpell.words": [
         "lightgreen",

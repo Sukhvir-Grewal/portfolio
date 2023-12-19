@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 13,
+            "activePatchIndex": 14,
             "patches": [
                 {
                     "date": 1700434012999,
@@ -60,6 +60,10 @@
                 {
                     "date": 1701450336306,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,8 @@\n         \"next.config.js\": true,\r\n         \"package-lock.json\": true\r\n     },\r\n     \"cSpell.words\": [\r\n-        \"lightgreen\"\r\n+        \"lightgreen\",\r\n+        \"typer\"\r\n     ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703021024867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,9 @@\n         \".gitignore\": true,\r\n         \".lh\": true,\r\n         \".vscode\": true,\r\n         \"jsconfig.json\": true,\r\n-        \"next.config.js\": true,\r\n-        \"package-lock.json\": true\r\n+        \"next.config.js\": true\r\n     },\r\n     \"cSpell.words\": [\r\n         \"lightgreen\",\r\n         \"typer\"\r\n"
                 }
             ],
             "date": 1700434012999,
