@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1703027203132,
@@ -12,6 +12,26 @@
                 {
                     "date": 1703031818030,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n     \"start\": \"next start\",\n     \"lint\": \"next lint\"\n   },\n   \"dependencies\": {\n+    \"@fortawesome/fontawesome-free\": \"^6.5.0\",\n     \"axios\": \"^1.6.2\",\n     \"bootstrap\": \"^5.3.2\",\n     \"dotenv\": \"^16.3.1\",\n     \"next\": \"^14.0.4\",\n"
+                },
+                {
+                    "date": 1703046814708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,11 @@\n     \"start\": \"next start\",\n     \"lint\": \"next lint\"\n   },\n   \"dependencies\": {\n-    \"@fortawesome/fontawesome-free\": \"^6.5.0\",\n+    \"@fortawesome/fontawesome-free\": \"^6.5.1\",\n     \"axios\": \"^1.6.2\",\n+    \n     \"bootstrap\": \"^5.3.2\",\n     \"dotenv\": \"^16.3.1\",\n     \"next\": \"^14.0.4\",\n     \"node\": \"^21.2.0\",\n"
+                },
+                {
+                    "date": 1703046821190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   },\n   \"dependencies\": {\n     \"@fortawesome/fontawesome-free\": \"^6.5.1\",\n     \"axios\": \"^1.6.2\",\n-    \n+    // the pr\n     \"bootstrap\": \"^5.3.2\",\n     \"dotenv\": \"^16.3.1\",\n     \"next\": \"^14.0.4\",\n     \"node\": \"^21.2.0\",\n"
+                },
+                {
+                    "date": 1703046830493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n     \"lint\": \"next lint\"\n   },\n   \"dependencies\": {\n     \"@fortawesome/fontawesome-free\": \"^6.5.1\",\n-    \"axios\": \"^1.6.2\",\n-    // the pr\n+    \"axios\": \"^1.6.2\"\n+    // the problem is here,\n     \"bootstrap\": \"^5.3.2\",\n     \"dotenv\": \"^16.3.1\",\n     \"next\": \"^14.0.4\",\n     \"node\": \"^21.2.0\",\n"
+                },
+                {
+                    "date": 1703046841956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,9 @@\n     \"lint\": \"next lint\"\n   },\n   \"dependencies\": {\n     \"@fortawesome/fontawesome-free\": \"^6.5.1\",\n-    \"axios\": \"^1.6.2\"\n-    // the problem is here,\n+    \"axios\": \"^1.6.2\",\n     \"bootstrap\": \"^5.3.2\",\n     \"dotenv\": \"^16.3.1\",\n     \"next\": \"^14.0.4\",\n     \"node\": \"^21.2.0\",\n"
+                },
+                {
+                    "date": 1703051730099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,8 @@\n     \"axios\": \"^1.6.2\",\n     \"bootstrap\": \"^5.3.2\",\n     \"dotenv\": \"^16.3.1\",\n     \"next\": \"^14.0.4\",\n-    \"node\": \"^21.2.0\",\n     \"nodemailer\": \"^6.9.7\",\n     \"react\": \"^18.2.0\",\n     \"react-bootstrap\": \"^2.9.1\",\n     \"react-dom\": \"^18.2.0\",\n"
                 }
             ],
             "date": 1703027203132,
