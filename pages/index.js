@@ -84,9 +84,9 @@ export default function Home() {
             setNumberOfVisitsForImages(newNumberOfVisitsForImages);
 
             setCurrentDialog(dialog);
-            setTimeout(() => {
+            // setTimeout(() => {
                 setCurrentImage(image);
-            }, 200);
+            // }, 2000);
         },
         [numberOfVisits]
     );

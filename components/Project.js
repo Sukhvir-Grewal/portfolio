@@ -12,22 +12,6 @@ export default function Project({ setView , view}) {
     const [isExpanded, setIsExpanded] = useState(false);
     const [isSingleExpanded, setIsSingleExpanded] = useState(false);
     const [singleExpandIndex, setSingleExpandIndex] = useState(0);
-
-    useEffect(() => {
-        let isMounted = true;
-    
-        const timeoutId = setTimeout(() => {
-            if (isMounted) {
-                setCurrentDialog(dialogsArray["project"]["visitIt"]);
-                setCurrentImage(dialogsArray["project"]["visitItImage"]);
-            }
-        }, 3000);
-    
-        return () => {
-            isMounted = false;
-            clearTimeout(timeoutId);
-        };
-    }, []);
     
 
     function renderProjectImages(count) {

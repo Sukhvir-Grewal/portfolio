@@ -27,15 +27,15 @@ export default function Footer({
         clickAbleContainer.style.cursor = "auto";
 
         const handleClick = () => {
-            imageRef.current.classList.add("fadeOut");
+            // imageRef.current.classList.add("fadeOut");
             handleDialogUpdateOnClick(view);
-            setTimeout(() => {
-                imageRef.current.classList.remove("fadeOut");
-                imageRef.current.classList.add("fadeIn");
-                setTimeout(() => {
-                    imageRef.current.classList.remove("fadeIn");
-                }, 200);
-            }, 200);
+            // setTimeout(() => {
+                // imageRef.current.classList.remove("fadeOut");
+                // imageRef.current.classList.add("fadeIn");
+                // setTimeout(() => {
+                    // imageRef.current.classList.remove("fadeIn");
+                // }, 5000);
+            // }, 5000);
         };
 
         function typeEffect() {

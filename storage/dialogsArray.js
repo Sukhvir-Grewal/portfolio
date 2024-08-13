@@ -50,19 +50,18 @@ const dialogsArray = {
     project: {
         script1: [
             "Check out these handmade masterpieces, no AI magic, just pure brilliance!",
+            "Head over to our project website for a real eye-opener – it's horizon time!",
             "My projects are my dreams woven into reality.",
             "Keen to read what I've written? Prepare for a rollercoaster of words and wit!",
         ],
         lastVisit:
             "These projects may not be the top of the line, but they're great examples of my abilities.",
-        visitIt:
-            "Head over to our project website for a real eye-opener – it's horizon time!",
         images: [
             "/images/myImages/project-1.png",
+            "/images/myImages/project-01.png",
             "/images/myImages/project-2.png",
             "/images/myImages/project-3.png",
         ],
-        visitItImage: "/images/myImages/project-01.png",
         lastVisitImage:"/images/myImages/project-02.png"
         
     },
