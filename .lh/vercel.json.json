@@ -3,11 +3,19 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1707110700877,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1723585441416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,5 @@\n-{\r\n-    \"build\": {\r\n-      \"ignore\": [\r\n-        \"@fortawesome/fontawesome-free\"\r\n-      ]\r\n-    }\r\n-  }\r\n-  \n\\ No newline at end of file\n+// {\n+//     \"build\": {\n+//         \"ignore\": [\"@fortawesome/fontawesome-free\"]\n+//     }\n+// }\n"
+                },
+                {
+                    "date": 1723585453525,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-// {\n-//     \"build\": {\n-//         \"ignore\": [\"@fortawesome/fontawesome-free\"]\n-//     }\n-// }\n+{\n+    \"build\": {\n+        \"ignore\": [\"@fortawesome/fontawesome-free\"]\n+    }\n+}\n"
                 }
             ],
             "date": 1707110700877,
