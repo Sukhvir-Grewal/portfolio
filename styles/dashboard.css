@@ -1,9 +1,13 @@
 .main-dashBoard-container {
     width: 100vw;
-    height: calc(100dvh - 200px);
+    /* height: calc(100dvh - 200px); */
+    height: 100%;
     padding: 20px;
     font-size: x-large;
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .left-particles {
@@ -45,8 +49,6 @@
 
 .menu-container {
     min-height: 66.6px;
-    width: 100%;
-    /* background-color: rgb(68, 67, 67); */
     padding-left: 150px;
     padding-right: 150px;
 }
@@ -54,8 +56,13 @@
 .option {
     height: 66.6px;
     /* background-color: rgb(58, 57, 57); */
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
+
+.option span {
+    white-space: nowrap;
+}
+
 
 .expand {
     cursor: pointer;
@@ -64,7 +71,7 @@
 @media (max-width: 600px) {
     .main-dashBoard-container {
         width: 100vw;
-        height: calc(100dvh - 200px);
+        height: calc(100dvh - 150px);
         display: flex;
         padding: 20px;
     }

@@ -147,7 +147,7 @@ export default function Skills({ setView, view }) {
                 </div>
             </div>
 
-            <div className="main-about-container">
+            <div className="main-skill-container">
                 <div className="name-tag-container">
                     <div className="name-tag">&lt;skills&gt;</div>
                 </div>

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 14,
+            "activePatchIndex": 15,
             "patches": [
                 {
                     "date": 1700434012999,
@@ -64,6 +64,10 @@
                 {
                     "date": 1703021024867,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,9 @@\n         \".gitignore\": true,\r\n         \".lh\": true,\r\n         \".vscode\": true,\r\n         \"jsconfig.json\": true,\r\n-        \"next.config.js\": true,\r\n-        \"package-lock.json\": true\r\n+        \"next.config.js\": true\r\n     },\r\n     \"cSpell.words\": [\r\n         \"lightgreen\",\r\n         \"typer\"\r\n"
+                },
+                {
+                    "date": 1723588387377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,15 @@\n-{\r\n-    \"files.exclude\": {\r\n-        \".eslintrc.json\": true,\r\n-        \".gitignore\": true,\r\n-        \".lh\": true,\r\n-        \".vscode\": true,\r\n-        \"jsconfig.json\": true,\r\n-        \"next.config.js\": true\r\n-    },\r\n-    \"cSpell.words\": [\r\n-        \"lightgreen\",\r\n-        \"typer\"\r\n-    ]\r\n+{\n+    \"files.exclude\": {\n+        \".eslintrc.json\": true,\n+        \".gitignore\": true,\n+        \".lh\": true,\n+        \".vscode\": true,\n+        \"jsconfig.json\": true,\n+        \"next.config.js\": true\n+    },\n+    \"cSpell.words\": [\n+        \"lightgreen\",\n+        \"typer\"\n+    ],\n+    \"liveServer.settings.port\": 5501\n }\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1700434012999,

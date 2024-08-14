@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 37,
+            "activePatchIndex": 39,
             "patches": [
                 {
                     "date": 1697582788328,
@@ -156,6 +156,14 @@
                 {
                     "date": 1723582530990,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,38 +6,12 @@\n import \"@/styles/contact.css\";\n import \"@/styles/skills.css\";\n \n import { DialogProvider } from \"@/globalContext/DialogContext\";\n-import Head from \"next/head\";\n \n export default function App({ Component, pageProps }) {\n     return (\n         <DialogProvider>\n-            <Head>\n-                <link rel=\"preload\" href=\"/images/myImages/about-1.png\" as=\"image\" />\n-                <link rel=\"preload\" href=\"/images/myImages/about-01.png\" as=\"image\" />\n-                <link rel=\"preload\" href=\"/images/myImages/about-2.png\" as=\"image\" />\n-                <link rel=\"preload\" href=\"/images/myImages/contact-1.png\" as=\"image\" />\n-                <link rel=\"preload\" href=\"/images/myImages/contact-01.png\" as=\"image\" />\n-                <link rel=\"preload\" href=\"/images/myImages/contact-2.png\" as=\"image\" />\n-                <link rel=\"preload\" href=\"/images/myImages/contact-02.png\" as=\"image\" />\n-                <link rel=\"preload\" href=\"/images/myImages/contact-3.png\" as=\"image\" />\n-                <link rel=\"preload\" href=\"/images/myImages/contact-03.png\" as=\"image\" />\n-                <link rel=\"preload\" href=\"/images/myImages/dashboard-1.png\" as=\"image\" />\n-                <link rel=\"preload\" href=\"/images/myImages/dashboard-2.png\" as=\"image\" />\n-                <link rel=\"preload\" href=\"/images/myImages/dashboard-3.png\" as=\"image\" />\n-                <link rel=\"preload\" href=\"/images/myImages/dashboard-4.png\" as=\"image\" />\n-                <link rel=\"preload\" href=\"/images/myImages/project-1.png\" as=\"image\" />\n-                <link rel=\"preload\" href=\"/images/myImages/project-01.png\" as=\"image\" />\n-                <link rel=\"preload\" href=\"/images/myImages/project-2.png\" as=\"image\" />\n-                <link rel=\"preload\" href=\"/images/myImages/project-02.png\" as=\"image\" />\n-                <link rel=\"preload\" href=\"/images/myImages/project-3.png\" as=\"image\" />\n-                <link rel=\"preload\" href=\"/images/myImages/skill-1.png\" as=\"image\" />\n-                <link rel=\"preload\" href=\"/images/myImages/skill-01.png\" as=\"image\" />\n-                <link rel=\"preload\" href=\"/images/myImages/skill-2.png\" as=\"image\" />\n-                <link rel=\"preload\" href=\"/images/myImages/skill-02.png\" as=\"image\" />\n-                <link rel=\"preload\" href=\"/images/myImages/skill-02.png\" as=\"image\" />\n-            </Head>\n             <Component {...pageProps} />\n         </DialogProvider>\n     );\n }\n"
+                },
+                {
+                    "date": 1723590189092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n import \"@/styles/about.css\";\n import \"@/styles/project.css\";\n import \"@/styles/contact.css\";\n import \"@/styles/skills.css\";\n+import \"@/styles/skills.css\";\n \n import { DialogProvider } from \"@/globalContext/DialogContext\";\n \n export default function App({ Component, pageProps }) {\n"
+                },
+                {
+                    "date": 1723590194753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import \"@/styles/about.css\";\n import \"@/styles/project.css\";\n import \"@/styles/contact.css\";\n import \"@/styles/skills.css\";\n-import \"@/styles/skills.css\";\n+import \"@/styles/pa.css\";\n \n import { DialogProvider } from \"@/globalContext/DialogContext\";\n \n export default function App({ Component, pageProps }) {\n"
                 }
             ],
             "date": 1697582788328,

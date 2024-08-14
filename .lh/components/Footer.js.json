@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 38,
+            "activePatchIndex": 44,
             "patches": [
                 {
                     "date": 1723581572387,
@@ -160,6 +160,30 @@
                 {
                     "date": 1723585210473,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,17 +26,17 @@\n         textElement.innerHTML = \"\";\n         clickAbleContainer.style.cursor = \"auto\";\n \n         const handleClick = () => {\n-            imageRef.current.classList.add(\"fadeOut\");\n+            // imageRef.current.classList.add(\"fadeOut\");\n             handleDialogUpdateOnClick(view);\n-            setTimeout(() => {\n-                imageRef.current.classList.remove(\"fadeOut\");\n-                imageRef.current.classList.add(\"fadeIn\");\n-                setTimeout(() => {\n-                    imageRef.current.classList.remove(\"fadeIn\");\n+            // setTimeout(() => {\n+                // imageRef.current.classList.remove(\"fadeOut\");\n+                // imageRef.current.classList.add(\"fadeIn\");\n+                // setTimeout(() => {\n+                    // imageRef.current.classList.remove(\"fadeIn\");\n                 }, 5000);\n-            }, 5000);\n+            // }, 5000);\n         };\n \n         function typeEffect() {\n             if (currentIndex < fullText.length) {\n"
+                },
+                {
+                    "date": 1723589334242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n                 // imageRef.current.classList.remove(\"fadeOut\");\n                 // imageRef.current.classList.add(\"fadeIn\");\n                 // setTimeout(() => {\n                     // imageRef.current.classList.remove(\"fadeIn\");\n-                }, 5000);\n+                // }, 5000);\n             // }, 5000);\n         };\n \n         function typeEffect() {\n@@ -61,8 +61,9 @@\n \n     return (\n         <>\n             <div className=\"footer-container\">\n+                <div></div>\n                 {currentImage && ( // Render Image only if currentImage is ready to Go\n                     <div className=\"image-container\">\n                         <Image\n                             ref={imageRef}\n"
+                },
+                {
+                    "date": 1723589344318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,11 @@\n \n     return (\n         <>\n             <div className=\"footer-container\">\n-                <div></div>\n+                <div className=\"glitch-img\">\n+\n+                </div>\n                 {currentImage && ( // Render Image only if currentImage is ready to Go\n                     <div className=\"image-container\">\n                         <Image\n                             ref={imageRef}\n"
+                },
+                {
+                    "date": 1723589497964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,11 +61,10 @@\n \n     return (\n         <>\n             <div className=\"footer-container\">\n-                <div className=\"glitch-img\">\n+                {/* <div className=\"glitch-img\"> */}\n \n-                </div>\n                 {currentImage && ( // Render Image only if currentImage is ready to Go\n                     <div className=\"image-container\">\n                         <Image\n                             ref={imageRef}\n@@ -74,11 +73,12 @@\n                             height={1000}\n                             width={1000}\n                             alt=\"\"\n                             priority\n-                        />\n+                            />\n                     </div>\n                 )}\n+                {/* </div> */}\n \n                 <div className=\"main-dialogs-container\">\n                     <div className=\"dialogs-container\">\n                         <p className=\"dialogs\" id=\"dialogs\"></p>\n"
+                },
+                {
+                    "date": 1723589605073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,8 @@\n \n     return (\n         <>\n             <div className=\"footer-container\">\n-                {/* <div className=\"glitch-img\"> */}\n \n                 {currentImage && ( // Render Image only if currentImage is ready to Go\n                     <div className=\"image-container\">\n                         <Image\n@@ -76,9 +75,8 @@\n                             priority\n                             />\n                     </div>\n                 )}\n-                {/* </div> */}\n \n                 <div className=\"main-dialogs-container\">\n                     <div className=\"dialogs-container\">\n                         <p className=\"dialogs\" id=\"dialogs\"></p>\n"
+                },
+                {
+                    "date": 1723590089220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,9 +76,9 @@\n                             />\n                     </div>\n                 )}\n \n-                <div className=\"main-dialogs-container\">\n+                <div className=\"main-dialogs-container pattern-container\">\n                     <div className=\"dialogs-container\">\n                         <p className=\"dialogs\" id=\"dialogs\"></p>\n                     </div>\n                 </div>\n"
+                },
+                {
+                    "date": 1723590097715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,9 +76,9 @@\n                             />\n                     </div>\n                 )}\n \n-                <div className=\"main-dialogs-container \">\n+                <div className=\"main-dialogs-container\">\n                     <div className=\"dialogs-container\">\n                         <p className=\"dialogs\" id=\"dialogs\"></p>\n                     </div>\n                 </div>\n"
                 }
             ],
             "date": 1723581572387,

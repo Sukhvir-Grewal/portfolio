@@ -1,7 +1,6 @@
 .footer-container {
     width: 100vw;
     height: 150px;
-    /* background-color: #D3D3D3; */
     position: fixed;
     bottom: 0;
     display: flex;
@@ -9,7 +8,7 @@
 .image-container {
     width: 332px;
     height: 100%;
-    background-color: #c0c0c0;
+    /* background-color: #c0c0c0; */
     position: relative;
     overflow: visible;
     pointer-events: none;
@@ -18,25 +17,25 @@
 .main-dialogs-container {
     height: 100%;
     width: 100vw;
-    background-color: #808080;
     padding: 20px;
     display: inline-block;
     cursor: pointer;
+    
 }
 
 .myImg {
     position: absolute;
     z-index: 10;
-    top: -50px; /* Adjust this value to get the desired 3D effect */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-48%) translateY(-50%);
+    bottom: 0; 
     height: 400px;
     width: 280px;
+    /* animation: glitch 500ms infinite linear; */
 }
 
 .fadeIn {
     animation: fadeIn 0.5s ease-in;
 }
+
 
 @keyframes fadeIn {
     from {
@@ -83,9 +82,7 @@
     .myImg {
         position: absolute;
         z-index: 10;
-        top: -50px; /* Adjust this value to get the desired 3D effect */
-        left: 50%; /* Center horizontally */
-        transform: translateX(-45%) translateY(-30%);
+        bottom: 0;
         height: 300px;
         width: 200px;
     }

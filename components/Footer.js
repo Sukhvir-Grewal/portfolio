@@ -61,7 +61,8 @@ export default function Footer({
 
     return (
         <>
-            <div className="footer-container">
+            <div className="footer-container pattern-container1">
+
                 {currentImage && ( // Render Image only if currentImage is ready to Go
                     <div className="image-container">
                         <Image
@@ -72,12 +73,12 @@ export default function Footer({
                             width={1000}
                             alt=""
                             priority
-                        />
+                            />
                     </div>
                 )}
 
-                <div className="main-dialogs-container">
-                    <div className="dialogs-container">
+                <div className="main-dialogs-container ">
+                    <div className="dialogs-container ">
                         <p className="dialogs" id="dialogs"></p>
                     </div>
                 </div>

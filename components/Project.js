@@ -13,7 +13,21 @@ export default function Project({ setView , view}) {
     const [isSingleExpanded, setIsSingleExpanded] = useState(false);
     const [singleExpandIndex, setSingleExpandIndex] = useState(0);
     
+    useEffect(() => {
+        const container = document.querySelector('.projects-container');
+        
+        const handleScroll = (event) => {
+            event.preventDefault();
+            container.scrollLeft += event.deltaY * 2;
+        };
 
+        container.addEventListener('wheel', handleScroll);
+
+        // Cleanup the event listener on component unmount
+        return () => {
+            container.removeEventListener('wheel', handleScroll);
+        };
+    }, []);
     function renderProjectImages(count) {
         // Create an array with `count` elements and map over it
         return Array.from({ length: count }, (_, ImageIndex) => (
@@ -71,7 +85,7 @@ export default function Project({ setView , view}) {
                 </>
             )}
 
-            <div className="main-about-container">
+            <div className="main-project-container">
                 <div className="name-tag-container">
                     <div className="name-tag">&lt;projects&gt;</div>
                     <div className={Style.goBack}>
@@ -82,6 +96,7 @@ export default function Project({ setView , view}) {
                             height={40}
                             width={40}
                             alt=""
+                            priority
                         />
                     </div>
                 </div>

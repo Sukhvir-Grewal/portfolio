@@ -93,7 +93,8 @@ export default function About({ setView }) {
 
     return (
         <>
-            <div ref={dropsContainerRef} className="drops-container"></div>
+            
+            <div ref={dropsContainerRef} className="drops-container "></div>
             <div className={Style.goBackContainer}>
                 <div
                     onClick={() => setView("dashboard")}
@@ -126,6 +127,7 @@ export default function About({ setView }) {
                     <div className="name-tag">&lt;/about&gt;</div>
                 </div>
             </div>
+
         </>
     );
 }

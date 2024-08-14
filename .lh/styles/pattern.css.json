@@ -1,0 +1,62 @@
+{
+    "sourceFile": "styles/pattern.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1723590211265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1723590216290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-.pattern-container {\n+.pattern-container1 {\n     background-color: blue;\n     background-image: \n         linear-gradient(90deg, rgb(87, 191, 226) 1px, transparent 1px),\n         linear-gradient(90deg, lightblue 1px, transparent 1px),\n"
+                },
+                {
+                    "date": 1723590228243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,16 @@\n         linear-gradient(0deg, lightblue 1px, transparent 1px),\n         linear-gradient(0deg, lightblue 1px, transparent 1px);\n     background-size: 2px 2px;\n     background-position: 0px 0px, 10px 10px, 0px 0px, 10px 10px;\n+}\n+\n+.pattern-container1 {\n+    background-color: blue;\n+    background-image: \n+        linear-gradient(90deg, rgb(87, 191, 226) 1px, transparent 1px),\n+        linear-gradient(90deg, lightblue 1px, transparent 1px),\n+        linear-gradient(0deg, lightblue 1px, transparent 1px),\n+        linear-gradient(0deg, lightblue 1px, transparent 1px);\n+    background-size: 2px 2px;\n+    background-position: 0px 0px, 10px 10px, 0px 0px, 10px 10px;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723590495730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     background-size: 2px 2px;\n     background-position: 0px 0px, 10px 10px, 0px 0px, 10px 10px;\n }\n \n-.pattern-container1 {\n+.pattern-container2 {\n     background-color: blue;\n     background-image: \n         linear-gradient(90deg, rgb(87, 191, 226) 1px, transparent 1px),\n         linear-gradient(90deg, lightblue 1px, transparent 1px),\n"
+                },
+                {
+                    "date": 1723590509139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n \n .pattern-container2 {\n     background-color: blue;\n     background-image: \n-        linear-gradient(90deg, rgb(87, 191, 226) 1px, transparent 1px),\n+        linear-gradient(90deg, rgb(63, 173, 209) 1px, transparent 1px),\n         linear-gradient(90deg, lightblue 1px, transparent 1px),\n         linear-gradient(0deg, lightblue 1px, transparent 1px),\n         linear-gradient(0deg, lightblue 1px, transparent 1px);\n     background-size: 2px 2px;\n"
+                },
+                {
+                    "date": 1723590520255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,10 @@\n .pattern-container2 {\n     background-color: blue;\n     background-image: \n         linear-gradient(90deg, rgb(63, 173, 209) 1px, transparent 1px),\n-        linear-gradient(90deg, lightblue 1px, transparent 1px),\n-        linear-gradient(0deg, lightblue 1px, transparent 1px),\n-        linear-gradient(0deg, lightblue 1px, transparent 1px);\n+        linear-gradient(90deg, rgb(63, 173, 209) 1px, transparent 1px),\n+        linear-gradient(0deg, rgb(63, 173, 209) 1px, transparent 1px),\n+        linear-gradient(0deg, rgb(63, 173, 209) 1px, transparent 1px);\n     background-size: 2px 2px;\n     background-position: 0px 0px, 10px 10px, 0px 0px, 10px 10px;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723597174618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,16 @@\n         linear-gradient(0deg, rgb(63, 173, 209) 1px, transparent 1px),\n         linear-gradient(0deg, rgb(63, 173, 209) 1px, transparent 1px);\n     background-size: 2px 2px;\n     background-position: 0px 0px, 10px 10px, 0px 0px, 10px 10px;\n+}\n+\n+.pattern-container2 {\n+    background-color: blue;\n+    background-image: \n+        linear-gradient(90deg, rgb(63, 173, 209) 1px, transparent 1px),\n+        linear-gradient(90deg, rgb(63, 173, 209) 1px, transparent 1px),\n+        linear-gradient(0deg, rgb(63, 173, 209) 1px, transparent 1px),\n+        linear-gradient(0deg, rgb(63, 173, 209) 1px, transparent 1px);\n+    background-size: 2px 2px;\n+    background-position: 0px 0px, 10px 10px, 0px 0px, 10px 10px;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723597187048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,13 +19,13 @@\n     background-size: 2px 2px;\n     background-position: 0px 0px, 10px 10px, 0px 0px, 10px 10px;\n }\n \n-.pattern-container2 {\n+.pattern-container3 {\n     background-color: blue;\n     background-image: \n+        linear-gradient(90deg, rgb(41, 163, 204) 1px, transparent 1px),\n         linear-gradient(90deg, rgb(63, 173, 209) 1px, transparent 1px),\n-        linear-gradient(90deg, rgb(63, 173, 209) 1px, transparent 1px),\n         linear-gradient(0deg, rgb(63, 173, 209) 1px, transparent 1px),\n         linear-gradient(0deg, rgb(63, 173, 209) 1px, transparent 1px);\n     background-size: 2px 2px;\n     background-position: 0px 0px, 10px 10px, 0px 0px, 10px 10px;\n"
+                },
+                {
+                    "date": 1723597197609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,11 +22,11 @@\n \n .pattern-container3 {\n     background-color: blue;\n     background-image: \n-        linear-gradient(90deg, rgb(41, 163, 204) 1px, transparent 1px),\n-        linear-gradient(90deg, rgb(63, 173, 209) 1px, transparent 1px),\n-        linear-gradient(0deg, rgb(63, 173, 209) 1px, transparent 1px),\n-        linear-gradient(0deg, rgb(63, 173, 209) 1px, transparent 1px);\n+        linear-gradient(90deg, rgb(42, 157, 196) 1px, transparent 1px),\n+        linear-gradient(90deg, rgb(42, 157, 196) 1px, transparent 1px),\n+        linear-gradient(0deg, rgb(42, 157, 196) 1px, transparent 1px),\n+        linear-gradient(0deg, rgb(42, 157, 196) 1px, transparent 1px);\n     background-size: 2px 2px;\n     background-position: 0px 0px, 10px 10px, 0px 0px, 10px 10px;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723597222821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,10 +22,10 @@\n \n .pattern-container3 {\n     background-color: blue;\n     background-image: \n+        linear-gradient(90deg, rgb(20, 79, 99) 1px, transparent 1px),\n         linear-gradient(90deg, rgb(42, 157, 196) 1px, transparent 1px),\n-        linear-gradient(90deg, rgb(42, 157, 196) 1px, transparent 1px),\n         linear-gradient(0deg, rgb(42, 157, 196) 1px, transparent 1px),\n         linear-gradient(0deg, rgb(42, 157, 196) 1px, transparent 1px);\n     background-size: 2px 2px;\n     background-position: 0px 0px, 10px 10px, 0px 0px, 10px 10px;\n"
+                },
+                {
+                    "date": 1723597232902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,10 @@\n .pattern-container3 {\n     background-color: blue;\n     background-image: \n         linear-gradient(90deg, rgb(20, 79, 99) 1px, transparent 1px),\n-        linear-gradient(90deg, rgb(42, 157, 196) 1px, transparent 1px),\n-        linear-gradient(0deg, rgb(42, 157, 196) 1px, transparent 1px),\n-        linear-gradient(0deg, rgb(42, 157, 196) 1px, transparent 1px);\n+        linear-gradient(90deg, rgb(20, 79, 99) 1px, transparent 1px),\n+        linear-gradient(0deg, rgb(20, 79, 99) 1px, transparent 1px),\n+        linear-gradient(0deg, rgb(20, 79, 99) 1px, transparent 1px);\n     background-size: 2px 2px;\n     background-position: 0px 0px, 10px 10px, 0px 0px, 10px 10px;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723597244274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,11 +22,11 @@\n \n .pattern-container3 {\n     background-color: blue;\n     background-image: \n-        linear-gradient(90deg, rgb(20, 79, 99) 1px, transparent 1px),\n-        linear-gradient(90deg, rgb(20, 79, 99) 1px, transparent 1px),\n-        linear-gradient(0deg, rgb(20, 79, 99) 1px, transparent 1px),\n-        linear-gradient(0deg, rgb(20, 79, 99) 1px, transparent 1px);\n+        linear-gradient(90deg, rgb(42, 157, 196) 1px, transparent 1px),\n+        linear-gradient(90deg, rgb(42, 157, 196) 1px, transparent 1px),\n+        linear-gradient(0deg, rgb(42, 157, 196) 1px, transparent 1px),\n+        linear-gradient(0deg, rgb(42, 157, 196) 1px, transparent 1px);\n     background-size: 2px 2px;\n     background-position: 0px 0px, 10px 10px, 0px 0px, 10px 10px;\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1723590211265,
+            "name": "Commit-0",
+            "content": ".pattern-container {\n    background-color: blue;\n    background-image: \n        linear-gradient(90deg, rgb(87, 191, 226) 1px, transparent 1px),\n        linear-gradient(90deg, lightblue 1px, transparent 1px),\n        linear-gradient(0deg, lightblue 1px, transparent 1px),\n        linear-gradient(0deg, lightblue 1px, transparent 1px);\n    background-size: 2px 2px;\n    background-position: 0px 0px, 10px 10px, 0px 0px, 10px 10px;\n}"
+        }
+    ]
+}

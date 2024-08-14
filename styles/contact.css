@@ -1,3 +1,7 @@
+.main-contact-container {
+    margin-left: 260px;
+    height: 300px;
+}
 .main-form-container {
     height: 100%;
     width: 500px;
@@ -7,6 +11,7 @@
     white-space: nowrap;
     border: 1px solid black;
     position: relative;
+    border-radius: 10px;
 }
 
 .form-container {
@@ -21,13 +26,27 @@
 .input-box {
     margin: 10px;
     padding: 10px;
+    background-color: transparent;
+    border: 1px solid black;
+    color: white;
+    font-weight: 900;
 }
 
 .tet-box {
     margin: 10px;
     height: 100%;
     padding: 10px;
+    background-color: transparent;
+    border: 1px solid black;
+    color: white;
+    font-weight: 900;
 }
+
+.input-box:focus,
+.tet-box:focus {
+    outline: none;
+}
+
 
 .submit-button {
     background-color: transparent;
@@ -36,7 +55,9 @@
     height: 40%;
     cursor: pointer;
     border-radius: 3px;
-    color: rgb(68, 67, 67);
+    color: white;
+    font-weight: 900;
+    border: 1px solid black;
 }
 
 .contact {
@@ -88,6 +109,12 @@
 }
 
 @media (max-width: 600px) {
+    .main-contact-container {
+        margin-top: 50px;
+        margin-left: 50px;
+        height: calc(100dvh - 150px * 3);
+    }
+
     .main-form-container {
         height: 100%;
         width: 80%;
@@ -104,5 +131,10 @@
         display: flex;
         align-items: center;
         font-size: small;
+    }
+}
+@media (min-width: 550px) and (max-width: 850px)  {
+    .main-contact-container {
+        margin-left: 5px;
     }
 }

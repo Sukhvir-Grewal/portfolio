@@ -44,6 +44,8 @@ export default function Expandable({ setIsExpanded }) {
             index={singleExpandIndex}
         />
     ) : (
+        <>
+        <div className={Style.backDrop} />
         <div className={Style.mainExpandedContainer}>
             <div className={Style.crossContainer}>
                 <Image
@@ -55,11 +57,12 @@ export default function Expandable({ setIsExpanded }) {
                     alt=""
                 />
             </div>
-            <div className={Style.expandedContainer}>
-                <CardGroup style={{ display: "flex", flexWrap: "wrap" }}>
+            <div className={`pattern-container3 ${Style.expandedContainer}`}>
+                <CardGroup style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
                     {renderCards()}
                 </CardGroup>
             </div>
         </div>
+        </>
     );
 }

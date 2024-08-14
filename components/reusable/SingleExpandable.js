@@ -20,7 +20,7 @@ export default function SingleExpandable({ setIsSingleExpanded, index }) {
                         alt=""
                     />
                 </div>
-                <div className={Style.expandedContainer}>
+                <div className={`pattern-container3 ${Style.expandedContainer}`}>
                     <Card className={Style.singleCustomCard}>
                         <div className={Style.imageLanguageContainer}>
                             <div className={Style.singleImageContainer}>
@@ -42,6 +42,7 @@ export default function SingleExpandable({ setIsSingleExpanded, index }) {
                                                 paddingLeft: "4px",
                                                 animation: `barAnimation${languageIndex} 2s ease`,
                                             }}
+                                            className="pattern-container3"
                                         >
                                             <style>
                                                 {`@keyframes barAnimation${languageIndex}{

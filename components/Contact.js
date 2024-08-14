@@ -79,7 +79,7 @@ export default function Contact({ setView }) {
                 </div>
             </div>
 
-            <div className="main-about-container">
+            <div className="main-contact-container">
                 <div className="name-tag-container">
                     <div className="name-tag">&lt;contact&gt;</div>
                 </div>
@@ -93,6 +93,7 @@ export default function Contact({ setView }) {
                             required
                             className="input-box"
                             placeholder="Enter Gmail"
+                            type="email"
                             {...register("gmail")}
                         />
                         <textarea

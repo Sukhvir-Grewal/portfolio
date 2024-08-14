@@ -45,7 +45,6 @@ export default function Home() {
         ) {
             setCurrentDialog(dialogsArray[type]["script1"][0]);
             setCurrentImage(dialogsArray[type]["images"][0]);
-
         }
         if (lastView != "" && view == "dashboard") {
             setCurrentDialog(dialogsArray[lastView]["lastVisit"]);
@@ -85,7 +84,7 @@ export default function Home() {
 
             setCurrentDialog(dialog);
             // setTimeout(() => {
-                setCurrentImage(image);
+            setCurrentImage(image);
             // }, 2000);
         },
         [numberOfVisits]
@@ -111,7 +110,9 @@ export default function Home() {
 
     return (
         <>
-            {renderView(view)}
+            <div style={{ height: "100dvh" }} className="pattern-container2">
+                {renderView(view)}
+            </div>
             <Footer
                 view={view}
                 // This is for future use if i want to make more scripts to show

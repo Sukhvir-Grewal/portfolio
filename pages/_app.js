@@ -5,6 +5,7 @@ import "@/styles/about.css";
 import "@/styles/project.css";
 import "@/styles/contact.css";
 import "@/styles/skills.css";
+import "@/styles/pattern.css";
 
 import { DialogProvider } from "@/globalContext/DialogContext";
 

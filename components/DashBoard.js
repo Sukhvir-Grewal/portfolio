@@ -26,7 +26,6 @@ export default function DashBoard({ setView }) {
     return (
         <>
             <div className="main-dashBoard-container">
-                <div className="left-particles"></div>
                 <div className="dashboard-container">
                     <div className="name-tag-container">
                         <span>&lt;menu&gt;</span>

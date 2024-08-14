@@ -25,6 +25,8 @@
     right: 0;
     z-index: 2;
     backdrop-filter: blur(10px);
+    overflow-y: hidden;
+
 }
 
 .mainExpandedContainer {
@@ -53,10 +55,11 @@
     padding: 20px;
     border: 0.5px solid black;
     border-radius: 10px;
-    background-color: rgb(197, 193, 193);
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
+    position: fixed;
+    height: 100dvh;
 }
 .customCard {
     border: 1px solid black;
@@ -96,7 +99,6 @@
 }
 
 .mainLanguageBarContainer {
-    border: 1px solid black;
     margin: 20px;
     display: inline-block;
     flex-grow: 1;
