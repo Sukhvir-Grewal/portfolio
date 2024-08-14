@@ -16,7 +16,7 @@
         linear-gradient(90deg, rgb(63, 173, 209) 1px, transparent 1px),
         linear-gradient(0deg, rgb(63, 173, 209) 1px, transparent 1px),
         linear-gradient(0deg, rgb(63, 173, 209) 1px, transparent 1px);
-    background-size: 2px 2px;
+    background-size: 3px 3px;
     background-position: 0px 0px, 10px 10px, 0px 0px, 10px 10px;
 }
 
@@ -27,6 +27,6 @@
         linear-gradient(90deg, rgb(42, 157, 196) 1px, transparent 1px),
         linear-gradient(0deg, rgb(42, 157, 196) 1px, transparent 1px),
         linear-gradient(0deg, rgb(42, 157, 196) 1px, transparent 1px);
-    background-size: 2px 2px;
+    background-size: 3px 3px;
     background-position: 0px 0px, 10px 10px, 0px 0px, 10px 10px;
 }

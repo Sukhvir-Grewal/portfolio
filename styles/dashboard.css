@@ -55,12 +55,17 @@
 
 .option {
     height: 66.6px;
-    /* background-color: rgb(58, 57, 57); */
-    /* border: 1px solid white; */
 }
 
 .option span {
     white-space: nowrap;
+}
+
+.option:hover{
+    transform: scaleX(1.1);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    color: white;
 }
 
 

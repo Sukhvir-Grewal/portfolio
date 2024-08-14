@@ -66,7 +66,7 @@
 .dialogs {
     font-size: large;
     color: white;
-    border-right: 2px solid white; /* Cursor-like effect */
+    border-right: 2px solid white;
 }
 
 @keyframes typing {
@@ -88,5 +88,6 @@
     }
     .dialogs {
         font-size: 15px;
+        border-right: none;
     }
 }
