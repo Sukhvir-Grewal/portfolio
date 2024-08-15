@@ -1,3 +1,6 @@
+
+
+
 .main-dashBoard-container {
     width: 100vw;
     /* height: calc(100dvh - 200px); */
@@ -35,6 +38,7 @@
     height: 66.6px;
     display: flex;
     justify-content: space-between;
+    
 }
 
 .name-tag {
