@@ -36,7 +36,7 @@ export default function Skills({ setView, view }) {
                 setCurrentDialog(dialogsArray["skill"]["howToOperate"]);
                 setCurrentImage(dialogsArray["skill"]["howToOperateImage"]);
             }
-        }, 2500);
+        }, 3800);
 
         /*  Math Stuff which i cant do by myself so used Chat-Gtp to put the images
             at the corner of the circle, i tried to understand it for 3 hours but
