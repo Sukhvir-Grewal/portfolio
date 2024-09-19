@@ -32,9 +32,31 @@
     /* animation: glitch 500ms infinite linear; */
 }
 
+.next{
+    position:absolute;
+    right: 10px;
+    bottom: 10px;
+    animation: glow 3s infinite linear ;
+}
+
 .fadeIn {
     animation: fadeIn 0.5s ease-in;
 }
+
+@keyframes glow {
+    0% {
+        color: white;
+    }
+    50% {
+        color: black;
+        transform: scale(1.01);
+    }
+    100% {
+        color: white;
+    }
+}
+
+
 
 
 @keyframes fadeIn {

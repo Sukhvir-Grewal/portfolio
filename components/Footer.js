@@ -80,6 +80,7 @@ export default function Footer({
                 <div className="main-dialogs-container ">
                     <div className="dialogs-container ">
                         <p className="dialogs" id="dialogs"></p>
+                        <span className="next">&lt;Next&gt;</span>
                     </div>
                 </div>
             </div>
