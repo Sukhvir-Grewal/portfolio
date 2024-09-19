@@ -100,14 +100,13 @@ export default function About({ setView }) {
                     onClick={() => setView("dashboard")}
                     className={Style.goBack}
                 >
-                    <Image
-                        className={Style.back}
-                        src="/images/back.png"
-                        height={50}
-                        width={50}
-                        alt=""
-                    />
+                    <div className={Style.o}>
+                        <div className={Style.v}>
+                            &lt;&lt;
+                        </div>
+                    </div>
                 </div>
+                
             </div>
 
             <div className="main-about-container">

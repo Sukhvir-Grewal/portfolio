@@ -1,6 +1,3 @@
-
-
-
 .main-dashBoard-container {
     width: 100vw;
     /* height: calc(100dvh - 200px); */
@@ -11,6 +8,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: calc(100vh - 150px); */
+}
+
+.cloudA{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
 }
 
 .left-particles {
@@ -38,7 +46,6 @@
     height: 66.6px;
     display: flex;
     justify-content: space-between;
-    
 }
 
 .name-tag {
@@ -65,13 +72,12 @@
     white-space: nowrap;
 }
 
-.option:hover{
+.option:hover {
     transform: scaleX(1.1);
     transform-origin: left;
     transition: transform 0.3s ease;
-    color: white;
+    color: rgb(80, 62, 62);
 }
-
 
 .expand {
     cursor: pointer;

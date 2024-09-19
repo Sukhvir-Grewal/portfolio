@@ -137,13 +137,11 @@ export default function Skills({ setView, view }) {
                     onClick={() => setView("dashboard")}
                     className={Style.goBack}
                 >
-                    <Image
-                        alt=""
-                        className={Style.back}
-                        src="/images/back.png"
-                        height={50}
-                        width={50}
-                    />
+                      <div className={Style.o}>
+                        <div className={Style.v}>
+                            &lt;&lt;
+                        </div>
+                    </div>
                 </div>
             </div>
 

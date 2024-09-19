@@ -32,8 +32,18 @@ export default function Home() {
     const [scriptNumber, setScriptNumber] = useState(0);
 
     useEffect(() => {
+        // if (view == "about"){
+        //     document.body.style.backgroundImage = "url('/images/pixelArts/about/backgroundClouds.webp')";
+        // }
+        // else if (view == "skill"){
+        //     document.body.style.backgroundImage = "url('/images/pixelArts/skill/backgroundGarden.webp')";
+        // }
+        // else if (view == "skill"){
+        //     document.body.style.backgroundColor = "red";
+        // }
         setLastView(view);
         handleDialogUpdate(view);
+        console.log(view)
     }, [view]);
 
     // This function is to reset the Script whenever we came back from another view
@@ -110,9 +120,7 @@ export default function Home() {
 
     return (
         <>
-            <div style={{ height: "100dvh" }} className="pattern-container2">
-                {renderView(view)}
-            </div>
+            {renderView(view)}
             <Footer
                 view={view}
                 // This is for future use if i want to make more scripts to show

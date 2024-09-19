@@ -1,3 +1,6 @@
+import Image from "next/image";
+import { useEffect, useRef } from "react";
+
 export default function DashBoard({ setView }) {
     const menuOptions = [
         { label: "About Me", view: "about" },
@@ -6,22 +9,72 @@ export default function DashBoard({ setView }) {
         { label: "Contact", view: "contact" },
     ];
 
-    /*  Very simple logic to create options for my menu option-view class will 
-        be used for future version to add styling for individual option
-    */
-        function renderOptions() {
-            return menuOptions.map((option) => (
-                <div key={option.view} className={`option option-${option.view}`}>
-                    <span
-                        style={{ cursor: "pointer" }}
-                        onClick={() => setView(option.view)}
-                    >
-                        {option.label}
-                    </span>
-                </div>
-            ));
+    const cloudRefs = useRef([]);
+
+    useEffect(() => {
+            spawnClouds(4);
+    }, []);
+
+    function renderOptions() {
+        return menuOptions.map((option) => (
+            <div key={option.view} className={`option option-${option.view}`}>
+                <span
+                    style={{ cursor: "pointer" }}
+                    onClick={() => setView(option.view)}
+                >
+                    {option.label}
+                </span>
+            </div>
+        ));
+    }
+
+    function spawnClouds(numberOfClouds) {
+        for (let i = 0; i < numberOfClouds; i++) {
+            setTimeout(() => {
+                const cloudElement = document.createElement("div");
+                cloudElement.className = "cloud";
+                cloudElement.style.position = "absolute";
+                cloudElement.style.top = `${Math.random() * window.innerHeight}px`;
+                cloudElement.style.left = `${Math.random() * window.innerWidth}px`; 
+                cloudElement.style.zIndex = "-1";
+    
+                const img = document.createElement("img");
+                img.src = "/images/pixelArts/dashBoard/cloudA.png";
+                img.style.height = "100px";
+                img.style.width = "100px";
+    
+                cloudElement.appendChild(img);
+                const container = document.querySelector(".main-dashBoard-container");
+                if (container) {
+                        document.querySelector(".main-dashBoard-container").appendChild(cloudElement);
+                }
+    
+                cloudRefs.current.push(cloudElement);
+    
+                animateCloud(cloudElement);
+            }, i * 500); 
         }
-        
+    }
+    
+    
+
+    function animateCloud(cloud) {
+        let currentLeft = parseInt(cloud.style.left, 10) || 0;
+
+        function moveCloud() {
+            currentLeft += 1;
+            cloud.style.left = `${currentLeft}px`;
+
+            if (currentLeft >= window.innerWidth) {
+                currentLeft = -100; 
+                cloud.style.top = `${Math.random() * window.innerHeight}px`; 
+            }
+
+            requestAnimationFrame(moveCloud);
+        }
+
+        moveCloud();
+    }
 
     return (
         <>
