@@ -65,6 +65,8 @@ export default function SingleExpandable({ setIsSingleExpanded, index }) {
                                 </h3>
                             </Card.Title>
                             <Card.Text>{ImagesArray[index].about}</Card.Text>
+                            <br/>
+                            <span><a href={ImagesArray[index].git} target="_blank">Git</a> | <a href={ImagesArray[index].website} target="_blank">Website</a></span>
                         </Card.Body>
                     </Card>
                 </div>
